@@ -1,0 +1,37 @@
+bookStore{
+	display:block;
+	background-color: grey;
+	color: white;
+	padding: 25px;
+	font-family: serif;
+}
+
+book{
+    display: block;
+    padding-left: 400px;
+}
+
+frontCover{
+	display: list-item;
+    list-style: url("Lalka.jpg");
+}
+
+
+header{
+	display: block;
+	margin-top: 100px;
+	text-align: center;
+}
+
+hMainTitle{
+	display: block;
+	font-size: 100px;
+}
+hDescription{
+	display: block;
+	font-size: 30px;
+}
+hStudents{
+	display: block;
+	font-size: 20px;
+}
