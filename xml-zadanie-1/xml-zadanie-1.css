@@ -2,16 +2,18 @@ bookStore{
 	display:block;
 	background-color: grey;
 	color: white;
-	padding: 250px;
+	padding: 25px;
 	font-family: serif;
 }
 
-bookStore::before{
-	content: "Spis książek:";
+book{
+    display: block;
+    padding-left: 400px;
 }
 
 frontCover{
-	content: url(attr(sciezka));
+	display: list-item;
+    list-style: url("Lalka.jpg");
 }
 
 

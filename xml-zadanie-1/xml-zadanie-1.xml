@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="xml-zadanie-1.css"?>
 <bookStore>
+	<description>
+		<header>
+			<hMainTitle>Inwentarz książek</hMainTitle>
+			<hDescription>Technologie XML - FTIMS 2018/19</hDescription>
+			<hStudents>
+				<student>Konrad Jaworski</student>
+				<student>Tomasz Witczak</student>
+			</hStudents>
+		</header>
+	</description>
 	<authors>
 		<author authorID="ASapko">
 			<firstName>Andrzej</firstName>
@@ -152,7 +162,7 @@
 			<publishYear>1890</publishYear>
 			<price>23,23</price>
 			<!--<frontCover>Lalka.jpg</frontCover>-->
-			<frontCover sciezka="https://github.com/Kjawo/xml-zadanie-1/blob/master/xml-zadanie-1/Lalka.jpg?raw=true" />
+			<frontCover src="Lalka.jpg"/>
 			
 			<!-- <html xmlns="http://www.w3.org/1999/xhtml">
 			<html xmlns="https://github.com/Kjawo/xml-zadanie-1/blob/master/xml-zadanie-1/">
@@ -162,17 +172,5 @@
 			<isbn>83-01-05734-3</isbn>
 		</book>
 	</books>
-	
-	<description>
-		<header>
-			<hMainTitle>Inwentarz książek</hMainTitle>
-			<hDescription>Technologie XML - FTIMS 2018/19</hDescription>
-			<hStudents>
-				<student>Konrad Jaworski</student>
-				<student>Tomasz Witczak</student>
-			</hStudents>
-		</header>
-	</description>
-	
 </bookStore>
 <!-- test - added content -->
