@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="xml-zadanie-1.css"?>
 <!DOCTYPE bookStore SYSTEM "xml-zadanie-1.dtd">
+
 <bookStore>
 	<description>
 		<header>
 			<hMainTitle>Inwentarz książek</hMainTitle>
 			<hDescription>Technologie XML - FTIMS 2018/19</hDescription>
 			<hStudents>
-				<student>Konrad Jaworski</student>
-				<student>Tomasz Witczak</student>
+				<student>
+					<firstName>Konrad</firstName>
+					<lastName>Jaworski</lastName>
+					<indexNr>216782</indexNr>
+				</student>
+				<student>
+					<firstName>Tomasz</firstName>
+					<lastName>Witczak</lastName>
+					<indexNr>216782</indexNr>
+				</student>
 			</hStudents>
 		</header>
 	</description>

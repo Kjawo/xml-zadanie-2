@@ -4,13 +4,14 @@
         <!ELEMENT hMainTitle (#PCDATA)>
         <!ELEMENT hDescription (#PCDATA)>
         <!ELEMENT hStudents (student)*>
-        <!ELEMENT student (#PCDATA)>
+        <!ELEMENT student (firstName|lastName|indexNr)*>
+        <!ELEMENT firstName (#PCDATA)>
+        <!ELEMENT lastName (#PCDATA)>
+        <!ELEMENT indexNr (#PCDATA)>
         <!ELEMENT authors (author)*>
         <!ELEMENT author (firstName|lastName|birthDate)*>
         <!ATTLIST author
                 authorID CDATA #REQUIRED>
-        <!ELEMENT firstName (#PCDATA)>
-        <!ELEMENT lastName (#PCDATA)>
         <!ELEMENT birthDate (#PCDATA)>
         <!ELEMENT genres (genre)*>
         <!ELEMENT genre (#PCDATA)>
