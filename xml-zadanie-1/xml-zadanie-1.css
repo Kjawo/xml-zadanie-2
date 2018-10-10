@@ -11,9 +11,10 @@ book{
     padding-left: 400px;
 }
 
-frontCover{
+frontCover[src]{
 	display: list-item;
-    list-style: url("Lalka.jpg");
+    /*list-style: url("Lalka.jpg");*/
+    list-style: url("source");
 }
 
 

@@ -1,0 +1,41 @@
+<!ELEMENT bookStore (description|authors|genres|coverTypes|publishers|books)*>
+        <!ELEMENT description (header)*>
+        <!ELEMENT header (hMainTitle|hDescription|hStudents)*>
+        <!ELEMENT hMainTitle (#PCDATA)>
+        <!ELEMENT hDescription (#PCDATA)>
+        <!ELEMENT hStudents (student)*>
+        <!ELEMENT student (#PCDATA)>
+        <!ELEMENT authors (author)*>
+        <!ELEMENT author (firstName|lastName|birthDate)*>
+        <!ATTLIST author
+                authorID CDATA #REQUIRED>
+        <!ELEMENT firstName (#PCDATA)>
+        <!ELEMENT lastName (#PCDATA)>
+        <!ELEMENT birthDate (#PCDATA)>
+        <!ELEMENT genres (genre)*>
+        <!ELEMENT genre (#PCDATA)>
+        <!ATTLIST genre
+                genreID CDATA #REQUIRED>
+        <!ELEMENT coverTypes (coverType)*>
+        <!ELEMENT coverType (#PCDATA)>
+        <!ATTLIST coverType
+                coverTypeID CDATA #REQUIRED>
+        <!ELEMENT publishers (publisher)*>
+        <!ELEMENT publisher (#PCDATA)>
+        <!ATTLIST publisher
+                publisherID CDATA #REQUIRED>
+        <!ELEMENT books (book)*>
+        <!ELEMENT book (title|pages|publishYear|price|frontCover|isbn)*>
+        <!ATTLIST book
+                authorID CDATA #REQUIRED
+                coverTypeID CDATA #REQUIRED
+                genreID CDATA #REQUIRED
+                publisherID CDATA #REQUIRED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT pages (#PCDATA)>
+        <!ELEMENT publishYear (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT frontCover (#PCDATA)>
+        <!ATTLIST frontCover
+                src CDATA #IMPLIED>
+        <!ELEMENT isbn (#PCDATA)>
