@@ -1,27 +1,89 @@
-bookStore{
-	display:block;
-	background-color: grey;
-	color: white;
-	padding: 25px;
-	font-family: serif;
-}
-
-book{
+/* ------------------------------------------------------------------------------------------------------------------ */
+bookStore {
     display: block;
-    padding-left: 400px;
+    background-color: #5CDB95;
+	color: #05386B;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 20px;
+	padding: 25px;
 }
 
-frontCover[src]{
-	display: list-item;
-    /*list-style: url("Lalka.jpg");*/
-    list-style: url("source");
+book {
+    display: block;
+    border: 4px solid #379683;
+    border-radius: 20px;
+    padding-left: 40px;
+    overflow: auto;
+}
+book:hover {
+    border: 4px solid #EDF5E1;
 }
 
+title {
+    display: block;
+}
+title::before {
+    content: "Tytuł: ";
+}
 
+pages {
+    display: block;
+}
+pages::before {
+    content: "Liczba stron: ";
+}
+
+publishYear {
+    display: block;
+}
+publishYear::before {
+    content: "Rok wydania: ";
+}
+
+price {
+    display: block;
+}
+price::before {
+    content: "Cena: ";
+}
+price::after {
+    content: " zł";
+}
+
+isbn {
+    display: block;
+}
+isbn::before {
+    content: "ISBN: ";
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+frontCover {
+    display: inline;
+    float: left;
+    height: 200px;
+}
+
+frontCover[src*="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg") }
+frontCover[src*="CzasPogardy.jpg"]          { content: url("CzasPogardy.jpg") }
+frontCover[src*="It.jpg"]                   { content: url("It.jpg") }
+frontCover[src*="KrewElfow.jpg"]            { content: url("KrewElfow.jpg") }
+frontCover[src*="Lalka.jpg"]                { content: url("Lalka.jpg") }
+frontCover[src*="MieczPrzeznaczenia.jpg"]   { content: url("MieczPrzeznaczenia.jpg") }
+frontCover[src*="OstatnieZyczenie.jpg"]     { content: url("OstatnieZyczenie.jpg") }
+frontCover[src*="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg") }
+frontCover[src*="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg") }
+frontCover[src*="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg") }
+frontCover[src*="TheShinning.jpg"]          { content: url("TheShinning.jpg") }
+frontCover[src*="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg") }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
 header{
 	display: block;
-	margin-top: 100px;
-	text-align: center;
+	border: 4px solid #379683;
+	border-radius: 20px;
+	text-align: right;
+	padding: 20px;
 }
 
 hMainTitle{
@@ -36,3 +98,4 @@ hStudents{
 	display: block;
 	font-size: 20px;
 }
+/* ------------------------------------------------------------------------------------------------------------------ */

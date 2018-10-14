@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-stylesheet type="text/css" href="xml-zadanie-1.css"?>
 <!DOCTYPE bookStore SYSTEM "xml-zadanie-1.dtd">
 
@@ -68,11 +68,11 @@
 	<books>
 		<book authorID="ASapko" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
+			<frontCover src="OstatnieZyczenie.jpg" />
 			<title>Ostatnie Życzenie</title>
 			<pages>288</pages>
 			<publishYear>1993</publishYear>
 			<price>35,99</price>
-			<frontCover>OstatnieZyczenie.jpg</frontCover>
 			<isbn>978-0-575-08244-1</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -81,7 +81,7 @@
 			<pages>384</pages>
 			<publishYear>1992</publishYear>
 			<price>35,99</price>
-			<frontCover>MieczPrzeznaczenia.jpg</frontCover>
+			<frontCover src="MieczPrzeznaczenia.jpg" />
 			<isbn>978-1-4732-1153-7</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -90,7 +90,7 @@
 			<pages>320</pages>
 			<publishYear>1994</publishYear>
 			<price>35,99</price>
-			<frontCover>KrewElfow.jpg</frontCover>
+			<frontCover src="KrewElfow.jpg" />
 			<isbn>978-0-575-08484-1</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -99,7 +99,7 @@
 			<pages>352</pages>
 			<publishYear>1995</publishYear>
 			<price>35,99</price>
-			<frontCover>CzasPogardy.jpg</frontCover>
+			<frontCover src="CzasPogardy.jpg" />
 			<isbn>978-0-575-09094-1</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -108,7 +108,7 @@
 			<pages>352</pages>
 			<publishYear>1996</publishYear>
 			<price>35,99</price>
-			<frontCover>ChrzestOgnia.jpg</frontCover>
+			<frontCover src="ChrzestOgnia.jpg" />
 			<isbn>978-0-575-09097-2</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -117,7 +117,7 @@
 			<pages>462</pages>
 			<publishYear>1997</publishYear>
 			<price>35,99</price>
-			<frontCover>WiezaJaskolki.jpg</frontCover>
+			<frontCover src="WiezaJaskolki.jpg" />
 			<isbn>978-0-575-09083-3</isbn>
 		</book>
 		<book authorID="ASapko" genreID="fantasy"
@@ -126,7 +126,7 @@
 			<pages>544</pages>
 			<publishYear>1999</publishYear>
 			<price>38,99</price>
-			<frontCover>PaniJeziora.jpg</frontCover>
+			<frontCover src="PaniJeziora.jpg" />
 			<isbn>978-0-575-09084-4</isbn>
 		</book>
 		<book authorID="SKing" genreID="horror"
@@ -135,7 +135,7 @@
 			<pages>1376</pages>
 			<publishYear>1986</publishYear>
 			<price>45,49</price>
-			<frontCover>It.jpg</frontCover>
+			<frontCover src="It.jpg" />
 			<isbn>0-670-81302-8</isbn>
 		</book>
 		<book authorID="SKing" genreID="horror"
@@ -144,7 +144,7 @@
 			<pages>447</pages>
 			<publishYear>1977</publishYear>
 			<price>30,49</price>
-			<frontCover>TheShinning.jpg</frontCover>
+			<frontCover src="TheShinning.jpg" />
 			<isbn>978-0-385-12167-5</isbn>
 		</book>
 		<book authorID="SKing" genreID="fantasy"
@@ -153,7 +153,7 @@
 			<pages>416</pages>
 			<publishYear>1996</publishYear>
 			<price>41,49</price>
-			<frontCover>TheGreenMile.jpg</frontCover>
+			<frontCover src="TheGreenMile.jpg" />
 			<isbn>978-0743210898</isbn>
 		</book>
 		<book authorID="UEco" genreID="crime"
@@ -162,7 +162,7 @@
 			<pages>512</pages>
 			<publishYear>1980</publishYear>
 			<price>49,99</price>
-			<frontCover src="TheNameoftheRose.jpg">TheNameoftheRose.jpg</frontCover>
+			<frontCover src="TheNameoftheRose.jpg" />
 			<isbn>0-15-144647-4</isbn>
 		</book>
 		<book authorID="BPrus" genreID="social novel"
@@ -172,7 +172,7 @@
 			<publishYear>1890</publishYear>
 			<price>23,23</price>
 			<!--<frontCover>Lalka.jpg</frontCover>-->
-			<frontCover src="Lalka.jpg"/>
+			<frontCover src="Lalka.jpg" />
 			
 			<!-- <html xmlns="http://www.w3.org/1999/xhtml">
 			<html xmlns="https://github.com/Kjawo/xml-zadanie-1/blob/master/xml-zadanie-1/">
