@@ -1,67 +1,101 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
+/* Color scheme */
+:root {
+    --color1: #05386B;
+    --color2: #379683;
+    --color3: #5CDB95;
+    --color4: #8EE4AF;
+    --color5: #EDF5E1;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
 bookStore {
     display: block;
-    background-color: #5CDB95;
-	color: #05386B;
+    /*background-color: var(--color3);*/
+    background-image: linear-gradient(to bottom, var(--color4), var(--color3), var(--color2));
+	color: var(--color5);
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 20px;
-	padding: 25px;
+	padding: 0px 5%;
 }
 
 book {
-    display: block;
-    border: 4px solid #379683;
-    border-radius: 20px;
-    padding-left: 40px;
+    display: grid;
+    background-color: var(--color1);
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
     overflow: auto;
+    grid-template-columns: 200px auto auto auto auto auto;
+    /*justify-content: space-evenly;*/
+}
+book * {
+    margin: auto 0px;
+}
+book *::after {
+    white-space: pre-wrap;
+    font-size: 20px;
 }
 book:hover {
-    border: 4px solid #EDF5E1;
+    border: 4px solid var(--color5);
 }
 
 title {
     display: block;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    font-style: italic;
 }
-title::before {
-    content: "Tytuł: ";
+title::after {
+    content: "\Atytuł ";
 }
 
 pages {
     display: block;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    text-align: center;
+    color: var(--color5);
+    font-size: 50px;
 }
-pages::before {
-    content: "Liczba stron: ";
+pages::after {
+    content: "\Aliczba stron";
+    white-space: pre-wrap;
+    font-size: 20px;
 }
 
 publishYear {
     display: block;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
 }
-publishYear::before {
-    content: "Rok wydania: ";
+publishYear::after {
+    content: "\Arok wydania";
 }
 
 price {
     display: block;
-}
-price::before {
-    content: "Cena: ";
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
 }
 price::after {
-    content: " zł";
+    content: "\Azł";
 }
 
 isbn {
     display: block;
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
 }
-isbn::before {
-    content: "ISBN: ";
+isbn::after {
+    content: "\AISBN";
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 frontCover {
-    display: inline;
-    float: left;
-    height: 200px;
+    display: block;
+    height: 300px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
 }
 
 frontCover[src*="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg") }
@@ -80,15 +114,19 @@ frontCover[src*="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg") 
 /* ------------------------------------------------------------------------------------------------------------------ */
 header{
 	display: block;
-	border: 4px solid #379683;
-	border-radius: 20px;
-	text-align: right;
+	background-color: var(--color1);
+	color: var(--color5);
+	text-align: center;
+	text-shadow: 0px 0px 4px var(--color2);
 	padding: 20px;
 }
 
 hMainTitle{
 	display: block;
-	font-size: 100px;
+	color: var(--color5);
+	font-size: 80px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 hDescription{
 	display: block;
