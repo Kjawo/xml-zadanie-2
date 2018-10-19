@@ -22,22 +22,22 @@
 		</header>
 	</description>
 	<authors>
-		<author authorID="ASapko">
+		<author authorID="Andrzej Sapkowski">
 			<firstName>Andrzej</firstName>
 			<lastName>Sapkowski</lastName>
 			<birthDate>21-06-1948</birthDate>
 		</author>
-		<author authorID="SKing">
+		<author authorID="Stephen King">
 			<firstName>Stephen</firstName>
 			<lastName>King</lastName>
 			<birthDate>21-09-1947</birthDate>
 		</author>
-		<author authorID="UEco">
+		<author authorID="Umberto Eco">
 			<firstName>Umberto</firstName>
 			<lastName>Eco</lastName>
 			<birthDate>05-01-1932</birthDate>
 		</author>
-		<author authorID="BPrus">
+		<author authorID="Bolesław Prus">
 			<firstName>Bolesław</firstName>
 			<lastName>Prus</lastName>
 			<birthDate>20-08-1847</birthDate>
@@ -66,7 +66,7 @@
 	</publishers>
 	
 	<books>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<frontCover src="OstatnieZyczenie.jpg" />
 			<title>Ostatnie Życzenie</title>
@@ -75,7 +75,7 @@
 			<price>35,99</price>
 			<isbn>978-0-575-08244-1</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Miecz przeznaczenia</title>
 			<pages>384</pages>
@@ -84,7 +84,7 @@
 			<frontCover src="MieczPrzeznaczenia.jpg" />
 			<isbn>978-1-4732-1153-7</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Krew elfów</title>
 			<pages>320</pages>
@@ -93,7 +93,7 @@
 			<frontCover src="KrewElfow.jpg" />
 			<isbn>978-0-575-08484-1</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Czas pogardy</title>
 			<pages>352</pages>
@@ -102,7 +102,7 @@
 			<frontCover src="CzasPogardy.jpg" />
 			<isbn>978-0-575-09094-1</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Chrzest ognia</title>
 			<pages>352</pages>
@@ -111,7 +111,7 @@
 			<frontCover src="ChrzestOgnia.jpg" />
 			<isbn>978-0-575-09097-2</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Wieża Jaskółki</title>
 			<pages>462</pages>
@@ -120,7 +120,7 @@
 			<frontCover src="WiezaJaskolki.jpg" />
 			<isbn>978-0-575-09083-3</isbn>
 		</book>
-		<book authorID="ASapko" genreID="fantasy"
+		<book authorID="Andrzej Sapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Pani Jeziora</title>
 			<pages>544</pages>
@@ -129,7 +129,7 @@
 			<frontCover src="PaniJeziora.jpg" />
 			<isbn>978-0-575-09084-4</isbn>
 		</book>
-		<book authorID="SKing" genreID="horror"
+		<book authorID="Stephen King" genreID="horror"
 				coverTypeID="paperback" publisherID="Viking">
 			<title>It</title>
 			<pages>1376</pages>
@@ -138,7 +138,7 @@
 			<frontCover src="It.jpg" />
 			<isbn>0-670-81302-8</isbn>
 		</book>
-		<book authorID="SKing" genreID="horror"
+		<book authorID="Stephen King" genreID="horror"
 				coverTypeID="paperback" publisherID="Doubleday">
 			<title>The Shining</title>
 			<pages>447</pages>
@@ -147,7 +147,7 @@
 			<frontCover src="TheShinning.jpg" />
 			<isbn>978-0-385-12167-5</isbn>
 		</book>
-		<book authorID="SKing" genreID="fantasy"
+		<book authorID="Stephen King" genreID="fantasy"
 				coverTypeID="hardback" publisherID="Signet Books">
 			<title>The Green Mile</title>
 			<pages>416</pages>
@@ -156,7 +156,7 @@
 			<frontCover src="TheGreenMile.jpg" />
 			<isbn>978-0743210898</isbn>
 		</book>
-		<book authorID="UEco" genreID="crime"
+		<book authorID="Umberto Eco" genreID="crime"
 				coverTypeID="hardback" publisherID="Bompiani">
 			<title>The Name of the Rose</title>
 			<pages>512</pages>
@@ -165,7 +165,7 @@
 			<frontCover src="TheNameoftheRose.jpg" />
 			<isbn>0-15-144647-4</isbn>
 		</book>
-		<book authorID="BPrus" genreID="social novel"
+		<book authorID="Bolesław Prus" genreID="social novel"
 				coverTypeID="paperback" publisherID="Gebethner i Wolff">
 			<title>Lalka</title>
 			<pages>664</pages>

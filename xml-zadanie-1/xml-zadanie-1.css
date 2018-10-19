@@ -1,17 +1,18 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Color scheme */
 :root {
-    --color1: #05386B;
-    --color2: #379683;
-    --color3: #5CDB95;
-    --color4: #8EE4AF;
-    --color5: #EDF5E1;
+    --color1: #314455;
+    --color2: #644E5B;
+    --color3: #9E5A63;
+    --color4: #65707B;
+    --color5: #97AABD;
+    --color6: #eff2f5;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 bookStore {
     display: block;
     /*background-color: var(--color3);*/
-    background-image: linear-gradient(to bottom, var(--color4), var(--color3), var(--color2));
+    background-image: linear-gradient(to bottom, var(--color1), var(--color2), var(--color3));
 	color: var(--color5);
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 20px;
@@ -25,18 +26,25 @@ book {
     text-align: center;
     padding: 20px;
     overflow: auto;
-    grid-template-columns: 200px auto auto auto auto auto;
+    grid-template-columns: 200px auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1%;
+    border-bottom: 2px solid var(--color5);
     /*justify-content: space-evenly;*/
 }
 book * {
     margin: auto 0px;
+    /* border: 4px solid white; */
 }
 book *::after {
     white-space: pre-wrap;
     font-size: 20px;
+    color: var(--color4);
 }
 book:hover {
-    border: 4px solid var(--color5);
+    border-left: 4px solid var(--color5);
+    border-right: 4px solid var(--color5);
+    border-bottom: 2px solid var(--color5);
 }
 
 title {
@@ -46,7 +54,7 @@ title {
     font-style: italic;
 }
 title::after {
-    content: "\Atytuł ";
+    content: "\A/\\ tytuł /\\\A \\/ autor \\/";
 }
 
 pages {
@@ -58,7 +66,7 @@ pages {
     font-size: 50px;
 }
 pages::after {
-    content: "\Aliczba stron";
+    content: "\A/\\ liczba stron /\\\A\\/ gatunek/wydawnictwo \\/";
     white-space: pre-wrap;
     font-size: 20px;
 }
@@ -69,7 +77,7 @@ publishYear {
     grid-row: 1 / span 1;
 }
 publishYear::after {
-    content: "\Arok wydania";
+    content: "\A/\\ rok wydania /\\";
 }
 
 price {
@@ -78,16 +86,34 @@ price {
     grid-row: 1 / span 1;
 }
 price::after {
-    content: "\Azł";
+    content: "\A/\\ cena [zł] /\\\A\\/ ISBN \\/";
+}
+
+book::before {
+   /* border: 4px solid white; */
+    display: block;
+    margin: auto 0px;
+    white-space: pre-wrap;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    content: attr(authorID);
+}
+
+book::after {
+    /* border: 4px solid white; */
+    display: block;
+    margin: auto 0px;
+    white-space: pre-wrap;
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    content: attr(genreID)"/"attr(publisherID);
 }
 
 isbn {
     display: block;
-    grid-column: 6 / span 1;
-    grid-row: 1 / span 1;
-}
-isbn::after {
-    content: "\AISBN";
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 2;
+    font-size:25px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -95,7 +121,7 @@ frontCover {
     display: block;
     height: 300px;
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 2;
 }
 
 frontCover[src*="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg") }
@@ -109,7 +135,7 @@ frontCover[src*="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg") }
 frontCover[src*="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg") }
 frontCover[src*="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg") }
 frontCover[src*="TheShinning.jpg"]          { content: url("TheShinning.jpg") }
-frontCover[src*="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg") }
+frontCover[src*="WiezaJaskolki.jpg"]         { content: url("WiezaJaskolki.jpg") }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 header{
@@ -137,3 +163,5 @@ hStudents{
 	font-size: 20px;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
+
+
