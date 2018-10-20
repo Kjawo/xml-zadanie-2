@@ -1,50 +1,83 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
-/* Color scheme */
+/* File: xml-zadanie-1.css */
+/* Authors: Konrad Jaworski, Tomasz Witczak
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* CSS variables: */
 :root {
+    /* - color scheme ('D' versions are slightly darker, 'L' - lighter) */
     --color1: #314455;
+    --color1-D: #1c2731;
+
     --color2: #644E5B;
     --color3: #9E5A63;
     --color4: #65707B;
     --color5: #97AABD;
-    --color6: #eff2f5;
+    --color5-L: #d0d9e1;
+
+    /* - arrow characters */
+    --arrow-up: "\2191";
+    --arrow-down: "\2193";
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
+/* Main selector */
 bookStore {
     display: block;
-    /*background-color: var(--color3);*/
-    background-image: linear-gradient(to bottom, var(--color1), var(--color2), var(--color3));
-	color: var(--color5);
+    background-image: linear-gradient(to bottom, var(--color1-D), var(--color2), var(--color3));
+	color: var(--color5-L);
 	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 20px;
-	padding: 0px 5%;
+	font-size: 100%;
+	padding: 0 5%;
 }
-
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Authors, genres, cover types, publishers, etc. */
+authors, genres, coverTypes, publishers {
+    display: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* List of books */
 book {
     display: grid;
     background-color: var(--color1);
-    font-size: 50px;
     text-align: center;
-    padding: 20px;
+    padding: 1%;
     overflow: auto;
-    grid-template-columns: 200px auto auto auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 1%;
-    border-bottom: 2px solid var(--color5);
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 1000% auto;
+    grid-gap: auto;
+    border-top: 0.05em solid var(--color5);
+
+    transition: all 0.1s ease-out;
+    opacity: 0.85;
+    margin: auto 0;
     /*justify-content: space-evenly;*/
 }
+
 book * {
-    margin: auto 0px;
-    /* border: 4px solid white; */
+    margin: auto 0;
+    /*border: 4px solid white;*/
+    font-size: 150%;
 }
+
 book *::after {
     white-space: pre-wrap;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 50%;
     color: var(--color4);
 }
 book:hover {
-    border-left: 4px solid var(--color5);
-    border-right: 4px solid var(--color5);
-    border-bottom: 2px solid var(--color5);
+    /*box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.2);*/
+    /*background-color: var(--color3);*/
+    /*background-color: rgba(var(--color4), 0.2);*/
+    opacity: 1;
+    /*outline: 0.25em solid var(--color5);*/
+    margin: auto -0.5%;
+}
+
+book[coverTypeID="paperback"] {
+    border-right: 5px solid white;
+}
+book[coverTypeID="hardback"] {
+    border-right: 5px solid black;
 }
 
 title {
@@ -54,7 +87,7 @@ title {
     font-style: italic;
 }
 title::after {
-    content: "\A/\\ tytuł /\\\A \\/ autor \\/";
+    content: "\A" var(--arrow-up) " tytuł " var(--arrow-up) "\A \\/ autor \\/";
 }
 
 pages {
@@ -62,13 +95,10 @@ pages {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
     text-align: center;
-    color: var(--color5);
-    font-size: 50px;
+    /*font-size: 50px;*/
 }
 pages::after {
     content: "\A/\\ liczba stron /\\\A\\/ gatunek/wydawnictwo \\/";
-    white-space: pre-wrap;
-    font-size: 20px;
 }
 
 publishYear {
@@ -77,16 +107,16 @@ publishYear {
     grid-row: 1 / span 1;
 }
 publishYear::after {
-    content: "\A/\\ rok wydania /\\";
+    content: "\A/\\ rok wydania /\\\A\\/ ISBN \\/";
 }
 
 price {
     display: block;
     grid-column: 5 / span 1;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 2;
 }
 price::after {
-    content: "\A/\\ cena [zł] /\\\A\\/ ISBN \\/";
+    content: "\A/\\ cena [zł] /\\";
 }
 
 book::before {
@@ -104,63 +134,73 @@ book::after {
     display: block;
     margin: auto 0px;
     white-space: pre-wrap;
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 1;
     grid-row: 2 / span 1;
     content: attr(genreID)"/"attr(publisherID);
 }
 
 isbn {
     display: block;
-    grid-column: 5 / span 1;
+    grid-column: 4 / span 1;
     grid-row: 2 / span 2;
-    font-size:25px;
+    /*font-size:25px;*/
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 frontCover {
     display: block;
-    height: 300px;
+    height: 100%;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
 
-frontCover[src*="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg") }
-frontCover[src*="CzasPogardy.jpg"]          { content: url("CzasPogardy.jpg") }
-frontCover[src*="It.jpg"]                   { content: url("It.jpg") }
-frontCover[src*="KrewElfow.jpg"]            { content: url("KrewElfow.jpg") }
-frontCover[src*="Lalka.jpg"]                { content: url("Lalka.jpg") }
-frontCover[src*="MieczPrzeznaczenia.jpg"]   { content: url("MieczPrzeznaczenia.jpg") }
-frontCover[src*="OstatnieZyczenie.jpg"]     { content: url("OstatnieZyczenie.jpg") }
-frontCover[src*="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg") }
-frontCover[src*="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg") }
-frontCover[src*="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg") }
-frontCover[src*="TheShinning.jpg"]          { content: url("TheShinning.jpg") }
-frontCover[src*="WiezaJaskolki.jpg"]         { content: url("WiezaJaskolki.jpg") }
+frontCover[src="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg"); }
+frontCover[src="CzasPogardy.jpg"]          { content: url("CzasPogardy.jpg"); }
+frontCover[src="It.jpg"]                   { content: url("It.jpg"); }
+frontCover[src="KrewElfow.jpg"]            { content: url("KrewElfow.jpg"); }
+frontCover[src="Lalka.jpg"]                { content: url("Lalka.jpg"); }
+frontCover[src="MieczPrzeznaczenia.jpg"]   { content: url("MieczPrzeznaczenia.jpg"); }
+frontCover[src="OstatnieZyczenie.jpg"]     { content: url("OstatnieZyczenie.jpg"); }
+frontCover[src="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg"); }
+frontCover[src="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg"); }
+frontCover[src="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg"); }
+frontCover[src="TheShinning.jpg"]          { content: url("TheShinning.jpg"); }
+frontCover[src="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg"); }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
-header{
+/* Header with title and short description */
+header {
 	display: block;
-	background-color: var(--color1);
-	color: var(--color5);
 	text-align: center;
-	text-shadow: 0px 0px 4px var(--color2);
-	padding: 20px;
+	background-color: var(--color1);
+	/*text-shadow: 0 0 100px var(--color5);*/
+	padding: 2%;
 }
 
-hMainTitle{
+header > mainTitle {
 	display: block;
-	color: var(--color5);
-	font-size: 80px;
+	font-size: 400%;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.5em;
 }
-hDescription{
+
+header > hDescription, header > hStudents {
 	display: block;
-	font-size: 30px;
+	color: var(--color5d);
+	font-size: 100%;
+	font-style: italic;
+	letter-spacing: 0.25em;
 }
-hStudents{
-	display: block;
-	font-size: 20px;
+
+header > hStudents > student:first-child::after {
+    content: " | ";
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Additional embellishments: */
+/* - subtle inner box shadow */
+bookStore, book, header {
+    box-shadow: inset 0 0 5em rgba(0, 0, 0, 0.1);
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
