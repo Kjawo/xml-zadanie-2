@@ -42,7 +42,7 @@ book {
     padding: 1%;
     overflow: auto;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 1000% auto;
+    grid-template-rows: auto auto;
     grid-gap: auto;
     border-top: 0.05em solid var(--color5);
 
@@ -87,7 +87,7 @@ title {
     font-style: italic;
 }
 title::after {
-    content: "\A" var(--arrow-up) " tytuł " var(--arrow-up) "\A \\/ autor \\/";
+    content: "\A" var(--arrow-up) " tytuł " var(--arrow-up) "\A " var(--arrow-down) " autor " var(--arrow-down);
 }
 
 pages {
@@ -98,7 +98,7 @@ pages {
     /*font-size: 50px;*/
 }
 pages::after {
-    content: "\A/\\ liczba stron /\\\A\\/ gatunek/wydawnictwo \\/";
+    content: "\A" var(--arrow-up) " liczba stron " var(--arrow-up) "\A" var(--arrow-down) " gatunek/wydawnictwo " var(--arrow-down);
 }
 
 publishYear {
@@ -107,7 +107,7 @@ publishYear {
     grid-row: 1 / span 1;
 }
 publishYear::after {
-    content: "\A/\\ rok wydania /\\\A\\/ ISBN \\/";
+    content: "\A" var(--arrow-up) " rok wydania " var(--arrow-up) "\A" var(--arrow-down) " ISBN " var(--arrow-down);
 }
 
 price {
@@ -116,7 +116,7 @@ price {
     grid-row: 1 / span 2;
 }
 price::after {
-    content: "\A/\\ cena [zł] /\\";
+    content: "\A" var(--arrow-up) " cena [zł] " var(--arrow-up);
 }
 
 book::before {
@@ -166,6 +166,9 @@ frontCover[src="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg"); }
 frontCover[src="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg"); }
 frontCover[src="TheShinning.jpg"]          { content: url("TheShinning.jpg"); }
 frontCover[src="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg"); }
+frontCover[src*="AGameOfThrones.jpg"]      { content: url("AGameOfThrones.jpg"); }
+frontCover[src*="AClashOfKings.jpg"]       { content: url("AClashOfKings.jpg"); }
+frontCover[src*="AStormOfSwords.jpg"]      { content: url("AStormOfSwords.jpg"); }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Header with title and short description */

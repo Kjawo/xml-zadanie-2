@@ -42,6 +42,11 @@
 			<lastName>Prus</lastName>
 			<birthDate>20-08-1847</birthDate>
 		</author>
+		<author authorID="Bolesław Prus">
+			<firstName>George R.R.</firstName>
+			<lastName>Martin</lastName>
+			<birthDate>21-06-1847</birthDate>
+	</author>
 	</authors>
 	
 	<genres>
@@ -63,6 +68,7 @@
 		<publisher publisherID="Signet Books">Signet Books</publisher>
 		<publisher publisherID="Bompiani">Bompiani</publisher>
 		<publisher publisherID="Gebethner i Wolff">Gebethner i Wolff</publisher>
+		<publisher publisherID="Zysk i S-ka">Zysk i S-ka</publisher>
 	</publishers>
 	
 	<books>
@@ -180,6 +186,24 @@
 			</html>-->
 			
 			<isbn>83-01-05734-3</isbn>
+		</book>
+		<book authorID="George R.R. Martin" genreID="fantasy"
+			  coverTypeID="hardback" publisherID="Zysk i S-ka">
+			<title>A Game of Thrones</title>
+			<pages>684</pages>
+			<publishYear>1996</publishYear>
+			<price>41,49</price>
+			<frontCover src="AGameOfThrones.jpg" />
+			<isbn>0-553-10354-7</isbn>
+		</book>
+		<book authorID="George R.R. Martin" genreID="fantasy"
+			  coverTypeID="hardback" publisherID="Zysk i S-ka">
+			<title>A Storm of Swords</title>
+			<pages>973</pages>
+			<publishYear>2000</publishYear>
+			<price>39,99</price>
+			<frontCover src="AStormOfSwords.jpg" />
+			<isbn>0-553-10663-5</isbn>
 		</book>
 	</books>
 </bookStore>
