@@ -29,12 +29,32 @@ bookStore {
 	padding: 0 5%;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
-/* Authors, genres, cover types, publishers, etc. */
-authors, genres, coverTypes, publishers {
+/* Authors, genres, publishers, etc. */
+authors, genres, publishers {
     display: none;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* List of books */
+
+coverTypes {
+    display: block;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+coverType[coverTypeID="paperback"] {
+    display: block;
+    color: white;
+}
+
+coverType[coverTypeID="hardback"] {
+    display: block;
+    color: black;
+}
+
 book {
     display: grid;
     background-color: var(--color1);
@@ -55,13 +75,13 @@ book {
 book * {
     margin: auto 0;
     /*border: 4px solid white;*/
-    font-size: 150%;
+    font-size: 180%;
 }
 
 book *::after {
     white-space: pre-wrap;
     /*font-size: 20px;*/
-    font-size: 50%;
+    font-size: 60%;
     color: var(--color4);
 }
 book:hover {
@@ -127,6 +147,7 @@ book::before {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     content: attr(authorID);
+    font-size: 180%;
 }
 
 book::after {
@@ -137,6 +158,7 @@ book::after {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
     content: attr(genreID)"/"attr(publisherID);
+    font-size: 180%;
 }
 
 isbn {
@@ -149,7 +171,7 @@ isbn {
 /* ------------------------------------------------------------------------------------------------------------------ */
 frontCover {
     display: block;
-    height: 100%;
+    height: 25vh;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
@@ -169,6 +191,13 @@ frontCover[src="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg"); 
 frontCover[src*="AGameOfThrones.jpg"]      { content: url("AGameOfThrones.jpg"); }
 frontCover[src*="AClashOfKings.jpg"]       { content: url("AClashOfKings.jpg"); }
 frontCover[src*="AStormOfSwords.jpg"]      { content: url("AStormOfSwords.jpg"); }
+frontCover[src*="AFeastForCrows.jpg"]      { content: url("AFeastForCrows.jpg"); }
+frontCover[src*="ADanceWithDragons.jpg"]   { content: url("ADanceWithDragons.jpg"); }
+frontCover[src*="TheFaultInOurStars.jpg"]  { content: url("TheFaultInOurStars.jpg"); }
+frontCover[src*="OgniemIMieczem.jpg"]      { content: url("OgniemIMieczem.jpg"); }
+frontCover[src*="Potop.jpg"]               { content: url("Potop.jpg"); }
+frontCover[src*="PanWolodyjowski.jpg"]     { content: url("PanWolodyjowski.jpg"); }
+
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Header with title and short description */
