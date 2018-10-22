@@ -22,37 +22,37 @@
 		</header>
 	</description>
 	<authors>
-		<author authorID="Andrzej Sapkowski">
+		<author authorID="ASapkowski">
 			<firstName>Andrzej</firstName>
 			<lastName>Sapkowski</lastName>
 			<birthDate>21-06-1948</birthDate>
 		</author>
-		<author authorID="Stephen King">
+		<author authorID="SKing">
 			<firstName>Stephen</firstName>
 			<lastName>King</lastName>
 			<birthDate>21-09-1947</birthDate>
 		</author>
-		<author authorID="Umberto Eco">
+		<author authorID="UEco">
 			<firstName>Umberto</firstName>
 			<lastName>Eco</lastName>
 			<birthDate>05-01-1932</birthDate>
 		</author>
-		<author authorID="Bolesław Prus">
+		<author authorID="BPrus">
 			<firstName>Bolesław</firstName>
 			<lastName>Prus</lastName>
 			<birthDate>20-08-1847</birthDate>
 		</author>
-		<author authorID="George R.R. Martin">
+		<author authorID="GRRMartin">
 			<firstName>George R.R.</firstName>
 			<lastName>Martin</lastName>
 			<birthDate>21-06-1948</birthDate>
 	    </author>
-        <author authorID="John Green">
+        <author authorID="JGreen">
             <firstName>John</firstName>
             <lastName>Green</lastName>
             <birthDate>24-08-1977</birthDate>
         </author>
-        <author authorID="Henryk Sienkiewicz">
+        <author authorID="HSienkiewicz">
             <firstName>Henryk</firstName>
             <lastName>Sienkiewicz</lastName>
             <birthDate>05-05-1846</birthDate>
@@ -84,7 +84,7 @@
 	</publishers>
 	
 	<books>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<frontCover src="OstatnieZyczenie.jpg" />
 			<title>Ostatnie Życzenie</title>
@@ -93,7 +93,7 @@
 			<price>35,99</price>
 			<isbn>978-0-575-08244-1</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Miecz przeznaczenia</title>
 			<pages>384</pages>
@@ -102,7 +102,7 @@
 			<frontCover src="MieczPrzeznaczenia.jpg" />
 			<isbn>978-1-4732-1153-7</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="hardback" publisherID="superNOWA">
 			<title>Krew elfów</title>
 			<pages>320</pages>
@@ -111,7 +111,7 @@
 			<frontCover src="KrewElfow.jpg" />
 			<isbn>978-0-575-08484-1</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Czas pogardy</title>
 			<pages>352</pages>
@@ -120,7 +120,7 @@
 			<frontCover src="CzasPogardy.jpg" />
 			<isbn>978-0-575-09094-1</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Chrzest ognia</title>
 			<pages>352</pages>
@@ -129,7 +129,7 @@
 			<frontCover src="ChrzestOgnia.jpg" />
 			<isbn>978-0-575-09097-2</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Wieża Jaskółki</title>
 			<pages>462</pages>
@@ -138,7 +138,7 @@
 			<frontCover src="WiezaJaskolki.jpg" />
 			<isbn>978-0-575-09083-3</isbn>
 		</book>
-		<book authorID="Andrzej Sapkowski" genreID="fantasy"
+		<book authorID="ASapkowski" genreID="fantasy"
 				coverTypeID="paperback" publisherID="superNOWA">
 			<title>Pani Jeziora</title>
 			<pages>544</pages>
@@ -147,7 +147,7 @@
 			<frontCover src="PaniJeziora.jpg" />
 			<isbn>978-0-575-09084-4</isbn>
 		</book>
-		<book authorID="Stephen King" genreID="horror"
+		<book authorID="SKing" genreID="horror"
 				coverTypeID="paperback" publisherID="Viking">
 			<title>It</title>
 			<pages>1376</pages>
@@ -156,7 +156,7 @@
 			<frontCover src="It.jpg" />
 			<isbn>0-670-81302-8</isbn>
 		</book>
-		<book authorID="Stephen King" genreID="horror"
+		<book authorID="SKing" genreID="horror"
 				coverTypeID="paperback" publisherID="Doubleday">
 			<title>The Shining</title>
 			<pages>447</pages>
@@ -165,7 +165,7 @@
 			<frontCover src="TheShinning.jpg" />
 			<isbn>978-0-385-12167-5</isbn>
 		</book>
-		<book authorID="Stephen King" genreID="fantasy"
+		<book authorID="SKing" genreID="fantasy"
 				coverTypeID="hardback" publisherID="Signet">
 			<title>The Green Mile</title>
 			<pages>416</pages>
@@ -174,7 +174,7 @@
 			<frontCover src="TheGreenMile.jpg" />
 			<isbn>978-0743210898</isbn>
 		</book>
-		<book authorID="Umberto Eco" genreID="kryminał"
+		<book authorID="UEco" genreID="kryminał"
 				coverTypeID="hardback" publisherID="Bompiani">
 			<title>The Name of the Rose</title>
 			<pages>512</pages>
@@ -183,7 +183,7 @@
 			<frontCover src="TheNameoftheRose.jpg" />
 			<isbn>0-15-144647-4</isbn>
 		</book>
-		<book authorID="Bolesław Prus" genreID="powieść"
+		<book authorID="BPrus" genreID="powieść"
 				coverTypeID="paperback" publisherID="Gebethner-Wolff">
 			<title>Lalka</title>
 			<pages>664</pages>
@@ -192,7 +192,7 @@
 			<frontCover src="Lalka.jpg" />
 			<isbn>83-01-05734-3</isbn>
 		</book>
-		<book authorID="George R.R. Martin" genreID="fantasy"
+		<book authorID="GRRMartin" genreID="fantasy"
 			  coverTypeID="hardback" publisherID="Zysk">
 			<title>A Game of Thrones</title>
 			<pages>684</pages>
@@ -201,7 +201,7 @@
 			<frontCover src="AGameOfThrones.jpg" />
 			<isbn>0-553-10354-7</isbn>
 		</book>
-        <book authorID="George R.R. Martin" genreID="fantasy"
+        <book authorID="GRRMartin" genreID="fantasy"
               coverTypeID="paperback" publisherID="Zysk">
             <title>A Clash of Kings</title>
             <pages>768</pages>
@@ -210,7 +210,7 @@
             <frontCover src="AClashOfKings.jpg" />
             <isbn>0-553-10803-4</isbn>
         </book>
-		<book authorID="George R.R. Martin" genreID="fantasy"
+		<book authorID="GRRMartin" genreID="fantasy"
 			  coverTypeID="hardback" publisherID="Zysk">
 			<title>A Storm of Swords</title>
 			<pages>973</pages>
@@ -219,7 +219,7 @@
 			<frontCover src="AStormOfSwords.jpg" />
 			<isbn>0-553-10663-5</isbn>
 		</book>
-        <book authorID="George R.R. Martin" genreID="fantasy"
+        <book authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
             <title>A Feast for Crows</title>
             <pages>753</pages>
@@ -228,7 +228,7 @@
             <frontCover src="AFeastForCrows.jpg" />
             <isbn>0-553-80150-3</isbn>
         </book>
-        <book authorID="George R.R. Martin" genreID="fantasy"
+        <book authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
             <title>A Dance with Dragons</title>
             <pages>1056</pages>
@@ -237,7 +237,7 @@
             <frontCover src="ADanceWithDragons.jpg" />
             <isbn>978-0553801477</isbn>
         </book>
-        <book authorID="John Green" genreID="powieść"
+        <book authorID="JGreen" genreID="powieść"
               coverTypeID="paperback" publisherID="Dutton">
             <title>The Fault in Our Stars</title>
             <pages>313</pages>
@@ -246,7 +246,7 @@
             <frontCover src="TheFaultInOurStars.jpg" />
             <isbn>0-525-47881-7</isbn>
         </book>
-        <book authorID="Henryk Sienkiewicz" genreID="powieść"
+        <book authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
             <title>Ogniem i mieczem</title>
             <pages>844</pages>
@@ -255,7 +255,7 @@
             <frontCover src="OgniemIMieczem.jpg" />
             <isbn>918-3-555-09083-1</isbn>
         </book>
-        <book authorID="Henryk Sienkiewicz" genreID="powieść"
+        <book authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
             <title>Potop</title>
             <pages>936</pages>
@@ -264,7 +264,7 @@
             <frontCover src="Potop.jpg" />
             <isbn>918-3-555-09083-2</isbn>
         </book>
-        <book authorID="Henryk Sienkiewicz" genreID="powieść"
+        <book authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
             <title>Pan Wołodyjowski</title>
             <pages>400</pages>

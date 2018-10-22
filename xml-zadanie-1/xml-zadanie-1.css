@@ -96,9 +96,16 @@ book::before {
     white-space: pre-wrap;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    content: attr(authorID);
     font-size: 180%;
 }
+
+book[authorID="ASapkowski"]::before { content: "Andrzej Sapkowski"; }
+book[authorID="SKing"]::before { content: "Stephen King"; }
+book[authorID="UEco"]::before { content: "Umberto Eco"; }
+book[authorID="BPrus"]::before { content: "Bolesław Prus"; }
+book[authorID="GRRMartin"]::before { content: "George R.R. Martin"; }
+book[authorID="JGreen"]::before { content: "John Green"; }
+book[authorID="HSienkiewicz"]::before { content: "Henryk Sienkiewicz"; }
 
 book::after {
     border: 4px solid white;
