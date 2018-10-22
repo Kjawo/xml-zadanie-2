@@ -2,17 +2,22 @@
 /* File: xml-zadanie-1.css */
 /* Authors: Konrad Jaworski, Tomasz Witczak
 /* ------------------------------------------------------------------------------------------------------------------ */
+/* File encoding */
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------------ */
 /* CSS variables: */
 :root {
     /* - color scheme ('D' versions are slightly darker, 'L' - lighter) */
     --color1: #314455;
-    --color1-D: #1c2731;
+    --color1-D: #1C2731;
+    --color1-L: #384E61;
 
     --color2: #644E5B;
     --color3: #9E5A63;
     --color4: #65707B;
     --color5: #97AABD;
-    --color5-L: #d0d9e1;
+    --color5-L: #D0D9E1;
 
     /* - arrow characters */
     --arrow-up: "\2191";
@@ -58,14 +63,16 @@ coverType[coverTypeID="hardback"] {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
-/* List of books*/
-book {
+/* List of books */
+/* - main book selector */
+books book {
     display: grid;
     background-color: var(--color1);
     text-align: center;
+    font-size: 180%;
     padding: 1%;
     overflow: auto;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 10% 25% 25% 25% 15%;
     grid-template-rows: auto auto;
     grid-gap: auto;
     border-top: 0.05em solid var(--color5);
@@ -73,153 +80,136 @@ book {
     transition: all 0.1s ease-out;
     opacity: 0.85;
     margin: auto 0;
-    /*justify-content: space-evenly;*/
 }
 
-book * {
-    margin: auto 0;
-   /*border: 4px solid white;*/
-    font-size: 180%;
-}
-
-book *::after {
-    white-space: pre-wrap;
-    /*font-size: 20px;*/
-    font-size: 60%;
-    color: var(--color4);
-}
-
-book::before {
-    /*border: 4px solid white;*/
-    display: block;
-    margin: auto 0px;
-    white-space: pre-wrap;
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    font-size: 180%;
-}
-
-book[authorID="ASapkowski"]::before { content: "Andrzej Sapkowski"; }
-book[authorID="SKing"]::before { content: "Stephen King"; }
-book[authorID="UEco"]::before { content: "Umberto Eco"; }
-book[authorID="BPrus"]::before { content: "Bolesław Prus"; }
-book[authorID="GRRMartin"]::before { content: "George R.R. Martin"; }
-book[authorID="JGreen"]::before { content: "John Green"; }
-book[authorID="HSienkiewicz"]::before { content: "Henryk Sienkiewicz"; }
-
-book::after {
-    /*border: 4px solid white;*/
-    display: block;
-    margin: auto 0px;
-    white-space: pre-wrap;
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-    content: attr(genreID)"/"attr(publisherID);
-    font-size: 180%;
-}
-
-book:hover {
-    box-shadow: inset 0 0 5em 1em rgba(0, 0, 0, 0.5);
-    /*background-color: var(--color3);*/
-    /*background-color: rgba(var(--color4), 0.2);*/
+/* - hover feature */
+books book:hover {
+    box-shadow: inset 0 0 2.5em rgba(0, 0, 0, 0.2);
     opacity: 1;
     margin: auto -0.5em;
 }
 
-book[coverTypeID="paperback"] {
-    border-right: 0.5em solid white;
-}
-book[coverTypeID="hardback"] {
-    border-right: 0.5em solid black;
+/* Pseudo-elements as grid items: */
+books book::before, books book::after {
+    display: block;
+    margin: auto 0px;
+    white-space: pre-wrap;
 }
 
+/* - author (displaying correct name with corresponding IDs) */
+books book:before {
+    grid-column: 2 / span 1;
+    grid-row:    2 / span 1;
+}
+books book[authorID="ASapkowski"]::before     { content: "Andrzej Sapkowski"; }
+books book[authorID="SKing"]::before          { content: "Stephen King"; }
+books book[authorID="UEco"]::before           { content: "Umberto Eco"; }
+books book[authorID="BPrus"]::before          { content: "Bolesław Prus"; }
+books book[authorID="GRRMartin"]::before      { content: "George R.R. Martin"; }
+books book[authorID="JGreen"]::before         { content: "John Green"; }
+books book[authorID="HSienkiewicz"]::before   { content: "Henryk Sienkiewicz"; }
+
+/* - genre, publisher */
+books book::after {
+    grid-column: 3 / span 1;
+    grid-row:    2 / span 1;
+    content: attr(genreID)"/"attr(publisherID);
+}
+
+/* Different right border color for hard or soft cover */
+books book[coverTypeID="paperback"]   { border-right: 0.25em solid white; }
+books book[coverTypeID="hardback"]    { border-right: 0.25em solid black; }
+
 /* ------------------------------------------------------------------------------------------------------------------ */
-/* Contents of a book entry */
-title {
+/* Contents of a book entry: */
+/* - all elements */
+books book * {
     display: block;
+    margin: auto;
+}
+/* - all descriptions */
+books book *::after {
+    white-space: pre-wrap;
+    font-size: 0.5em;
+    color: var(--color4);
+}
+/* - title */
+books book > title {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     font-style: italic;
 }
-title::after {
-    font-style: normal;
+books book > title::after {
     content: "\A" var(--arrow-up) " tytuł " var(--arrow-up) "\A " var(--arrow-down) " autor " var(--arrow-down);
+    font-style: normal;
 }
-
-pages {
-    display: block;
+/* - pages */
+books book > pages {
     grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    text-align: center;
-    /*font-size: 50px;*/
+    grid-row:    1 / span 1;
 }
-pages::after {
+books book > pages::after {
     content: "\A" var(--arrow-up) " liczba stron " var(--arrow-up) "\A" var(--arrow-down) " gatunek/wydawnictwo " var(--arrow-down);
 }
-
-publishYear {
-    display: block;
+/* - publish year */
+books book > publishYear {
     grid-column: 4 / span 1;
-    grid-row: 1 / span 1;
+    grid-row:    1 / span 1;
 }
-publishYear::after {
+books book > publishYear::after {
     content: "\A" var(--arrow-up) " rok wydania " var(--arrow-up) "\A" var(--arrow-down) " ISBN " var(--arrow-down);
 }
-
-price {
-    display: block;
+/* - price */
+books book > price {
     grid-column: 5 / span 1;
-    grid-row: 1 / span 2;
+    grid-row:    1 / span 2;
 }
-price::after {
+books book > price::after {
     content: "\A" var(--arrow-up) " cena [zł] " var(--arrow-up);
 }
-
-isbn {
-    display: block;
+/* - isbn number */
+books book > isbn {
     grid-column: 4 / span 1;
-    grid-row: 2 / span 2;
-    /*font-size:25px;*/
+    grid-row:    2 / span 1;
 }
-
-/* ------------------------------------------------------------------------------------------------------------------ */
-frontCover {
+/* - front cover */
+books book > frontCover {
     display: block;
     height: 100%;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
 
-frontCover[src="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg"); }
-frontCover[src="CzasPogardy.jpg"]          { content: url("CzasPogardy.jpg"); }
-frontCover[src="It.jpg"]                   { content: url("It.jpg"); }
-frontCover[src="KrewElfow.jpg"]            { content: url("KrewElfow.jpg"); }
-frontCover[src="Lalka.jpg"]                { content: url("Lalka.jpg"); }
-frontCover[src="MieczPrzeznaczenia.jpg"]   { content: url("MieczPrzeznaczenia.jpg"); }
-frontCover[src="OstatnieZyczenie.jpg"]     { content: url("OstatnieZyczenie.jpg"); }
-frontCover[src="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg"); }
-frontCover[src="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg"); }
-frontCover[src="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg"); }
-frontCover[src="TheShinning.jpg"]          { content: url("TheShinning.jpg"); }
-frontCover[src="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg"); }
-frontCover[src*="AGameOfThrones.jpg"]      { content: url("AGameOfThrones.jpg"); }
-frontCover[src*="AClashOfKings.jpg"]       { content: url("AClashOfKings.jpg"); }
-frontCover[src*="AStormOfSwords.jpg"]      { content: url("AStormOfSwords.jpg"); }
-frontCover[src*="AFeastForCrows.jpg"]      { content: url("AFeastForCrows.jpg"); }
-frontCover[src*="ADanceWithDragons.jpg"]   { content: url("ADanceWithDragons.jpg"); }
-frontCover[src*="TheFaultInOurStars.jpg"]  { content: url("TheFaultInOurStars.jpg"); }
-frontCover[src*="OgniemIMieczem.jpg"]      { content: url("OgniemIMieczem.jpg"); }
-frontCover[src*="Potop.jpg"]               { content: url("Potop.jpg"); }
-frontCover[src*="PanWolodyjowski.jpg"]     { content: url("PanWolodyjowski.jpg"); }
-
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Front covers' filenames */
+books book > frontCover[src="ChrzestOgnia.jpg"]         { content: url("ChrzestOgnia.jpg"); }
+books book > frontCover[src="CzasPogardy.jpg"]          { content: url("CzasPogardy.jpg"); }
+books book > frontCover[src="It.jpg"]                   { content: url("It.jpg"); }
+books book > frontCover[src="KrewElfow.jpg"]            { content: url("KrewElfow.jpg"); }
+books book > frontCover[src="Lalka.jpg"]                { content: url("Lalka.jpg"); }
+books book > frontCover[src="MieczPrzeznaczenia.jpg"]   { content: url("MieczPrzeznaczenia.jpg"); }
+books book > frontCover[src="OstatnieZyczenie.jpg"]     { content: url("OstatnieZyczenie.jpg"); }
+books book > frontCover[src="PaniJeziora.jpg"]          { content: url("PaniJeziora.jpg"); }
+books book > frontCover[src="TheGreenMile.jpg"]         { content: url("TheGreenMile.jpg"); }
+books book > frontCover[src="TheNameoftheRose.jpg"]     { content: url("TheNameoftheRose.jpg"); }
+books book > frontCover[src="TheShinning.jpg"]          { content: url("TheShinning.jpg"); }
+books book > frontCover[src="WiezaJaskolki.jpg"]        { content: url("WiezaJaskolki.jpg"); }
+books book > frontCover[src*="AGameOfThrones.jpg"]      { content: url("AGameOfThrones.jpg"); }
+books book > frontCover[src*="AClashOfKings.jpg"]       { content: url("AClashOfKings.jpg"); }
+books book > frontCover[src*="AStormOfSwords.jpg"]      { content: url("AStormOfSwords.jpg"); }
+books book > frontCover[src*="AFeastForCrows.jpg"]      { content: url("AFeastForCrows.jpg"); }
+books book > frontCover[src*="ADanceWithDragons.jpg"]   { content: url("ADanceWithDragons.jpg"); }
+books book > frontCover[src*="TheFaultInOurStars.jpg"]  { content: url("TheFaultInOurStars.jpg"); }
+books book > frontCover[src*="OgniemIMieczem.jpg"]      { content: url("OgniemIMieczem.jpg"); }
+books book > frontCover[src*="Potop.jpg"]               { content: url("Potop.jpg"); }
+books book > frontCover[src*="PanWolodyjowski.jpg"]     { content: url("PanWolodyjowski.jpg"); }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Header with title and short description */
 header {
 	display: block;
 	text-align: center;
-	background-color: var(--color1);
-	/*text-shadow: 0 0 100px var(--color5);*/
+	background-color: var(--color1-L);
 	padding: 2%;
 }
 
@@ -230,7 +220,7 @@ header > mainTitle {
 	letter-spacing: 0.5em;
 }
 
-header > hDescription, header > hStudents {
+header > description, header > students {
 	display: block;
 	color: var(--color5d);
 	font-size: 100%;
@@ -238,7 +228,7 @@ header > hDescription, header > hStudents {
 	letter-spacing: 0.25em;
 }
 
-header > hStudents > student:first-child::after {
+header > students > student:first-child::after {
     content: " | ";
 }
 

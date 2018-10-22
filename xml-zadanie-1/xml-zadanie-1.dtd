@@ -1,42 +1,48 @@
-<!ELEMENT bookStore (description|authors|genres|coverTypes|publishers|books)*>
-<!ELEMENT description (header)*>
-<!ELEMENT header (mainTitle|hDescription|hStudents)*>
-<!ELEMENT mainTitle (#PCDATA)>
-<!ELEMENT hDescription (#PCDATA)>
-<!ELEMENT hStudents (student)*>
-<!ELEMENT student (firstName|lastName|indexNr)*>
-<!ELEMENT firstName (#PCDATA)>
-<!ELEMENT lastName (#PCDATA)>
-<!ELEMENT indexNr (#PCDATA)>
-<!ELEMENT authors (author)*>
-<!ELEMENT author (firstName|lastName|birthDate)*>
-<!ATTLIST author
-        authorID ID #REQUIRED>
-<!ELEMENT birthDate (#PCDATA)>
-<!ELEMENT genres (genre)*>
-<!ELEMENT genre (#PCDATA)>
-<!ATTLIST genre
-        genreID ID #REQUIRED>
-<!ELEMENT coverTypes (coverType)*>
-<!ELEMENT coverType (#PCDATA)>
-<!ATTLIST coverType
-        coverTypeID ID #REQUIRED>
-<!ELEMENT publishers (publisher)*>
-<!ELEMENT publisher (#PCDATA)>
-<!ATTLIST publisher
-        publisherID ID #REQUIRED>
-<!ELEMENT books (book)*>
-<!ELEMENT book (title|pages|publishYear|price|frontCover|isbn)*>
-<!ATTLIST book
-        authorID IDREF #REQUIRED
-        coverTypeID IDREF #REQUIRED
-        genreID IDREF #REQUIRED
-        publisherID IDREF #REQUIRED>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT pages (#PCDATA)>
-<!ELEMENT publishYear (#PCDATA)>
-<!ELEMENT price (#PCDATA)>
-<!ELEMENT frontCover (#PCDATA)>
-<!ATTLIST frontCover
-        src CDATA #IMPLIED>
-<!ELEMENT isbn (#PCDATA)>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- File: xml-zadanie-1.dtd -->
+<!-- Authors: Konrad Jaworski, Tomasz Witczak -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!ELEMENT bookStore (header,authors,genres,coverTypes,publishers,books)>
+    <!ELEMENT header (mainTitle,description,students)>
+        <!ELEMENT mainTitle (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT students (student)+>
+            <!ELEMENT student (firstName,lastName,indexNr)>
+                <!ELEMENT firstName (#PCDATA)>
+                <!ELEMENT lastName (#PCDATA)>
+                <!ELEMENT indexNr (#PCDATA)>
+    <!ELEMENT authors (author)*>
+        <!ELEMENT author (firstName,lastName,birthDate)>
+        <!ATTLIST author
+                authorID ID #REQUIRED>
+        <!--<!ELEMENT firstName (#PCDATA)>
+            <!ELEMENT lastName (#PCDATA)>-->
+            <!ELEMENT birthDate (#PCDATA)>
+    <!ELEMENT genres (genre)*>
+        <!ELEMENT genre (#PCDATA)>
+        <!ATTLIST genre
+                genreID ID #REQUIRED>
+    <!ELEMENT coverTypes (coverType)*>
+        <!ELEMENT coverType (#PCDATA)>
+        <!ATTLIST coverType
+                coverTypeID ID #REQUIRED>
+    <!ELEMENT publishers (publisher)*>
+        <!ELEMENT publisher (#PCDATA)>
+        <!ATTLIST publisher
+                publisherID ID #REQUIRED>
+    <!ELEMENT books (book)*>
+        <!ELEMENT book (title,pages,publishYear,price,frontCover,isbn)>
+        <!ATTLIST book
+                authorID IDREF #REQUIRED
+                genreID IDREF #REQUIRED
+                coverTypeID (paperback|hardback) #REQUIRED
+                publisherID IDREF #REQUIRED>
+            <!ELEMENT title (#PCDATA)>
+            <!ELEMENT pages (#PCDATA)>
+            <!ELEMENT publishYear (#PCDATA)>
+            <!ELEMENT price (#PCDATA)>
+            <!ELEMENT frontCover EMPTY>
+            <!ATTLIST frontCover
+                    src CDATA #REQUIRED>
+            <!ELEMENT isbn (#PCDATA)>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
