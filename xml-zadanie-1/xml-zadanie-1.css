@@ -52,12 +52,12 @@ coverTypes {
     text-orientation: upright;
 }
 
-coverType[coverTypeID="paperback"] {
+coverType[coverTypeENUM="paperback"] {
     display: block;
     color: white;
 }
 
-coverType[coverTypeID="hardback"] {
+coverType[coverTypeENUM="hardback"] {
     display: block;
     color: black;
 }
@@ -117,8 +117,8 @@ books book::after {
 }
 
 /* Different right border color for hard or soft cover */
-books book[coverTypeID="paperback"]   { border-right: 0.25em solid white; }
-books book[coverTypeID="hardback"]    { border-right: 0.25em solid black; }
+books book[coverTypeENUM="paperback"]   { border-right: 0.25em solid white; }
+books book[coverTypeENUM="hardback"]    { border-right: 0.25em solid black; }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Contents of a book entry: */

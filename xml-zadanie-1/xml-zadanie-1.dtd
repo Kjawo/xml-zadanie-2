@@ -25,7 +25,7 @@
     <!ELEMENT coverTypes (coverType)*>
         <!ELEMENT coverType (#PCDATA)>
         <!ATTLIST coverType
-                coverTypeID ID #REQUIRED>
+                coverTypeENUM (paperback|hardback) #REQUIRED>
     <!ELEMENT publishers (publisher)*>
         <!ELEMENT publisher (#PCDATA)>
         <!ATTLIST publisher
@@ -35,7 +35,7 @@
         <!ATTLIST book
                 authorID IDREF #REQUIRED
                 genreID IDREF #REQUIRED
-                coverTypeID (paperback|hardback) #REQUIRED
+                coverTypeENUM (paperback|hardback) #REQUIRED
                 publisherID IDREF #REQUIRED>
             <!ELEMENT title (#PCDATA)>
             <!ELEMENT pages (#PCDATA)>
