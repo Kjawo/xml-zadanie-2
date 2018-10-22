@@ -1,7 +1,7 @@
 <!ELEMENT bookStore (description|authors|genres|coverTypes|publishers|books)*>
 <!ELEMENT description (header)*>
-<!ELEMENT header (hMainTitle|hDescription|hStudents)*>
-<!ELEMENT hMainTitle (#PCDATA)>
+<!ELEMENT header (mainTitle|hDescription|hStudents)*>
+<!ELEMENT mainTitle (#PCDATA)>
 <!ELEMENT hDescription (#PCDATA)>
 <!ELEMENT hStudents (student)*>
 <!ELEMENT student (firstName|lastName|indexNr)*>
