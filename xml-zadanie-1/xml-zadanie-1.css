@@ -65,7 +65,7 @@ book {
     text-align: center;
     padding: 1%;
     overflow: auto;
-    grid-template-columns: 20% auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto;
     grid-gap: auto;
     border-top: 0.05em solid var(--color5);
@@ -78,7 +78,7 @@ book {
 
 book * {
     margin: auto 0;
-    border: 4px solid white;
+   /*border: 4px solid white;*/
     font-size: 180%;
 }
 
@@ -90,7 +90,7 @@ book *::after {
 }
 
 book::before {
-    border: 4px solid white;
+    /*border: 4px solid white;*/
     display: block;
     margin: auto 0px;
     white-space: pre-wrap;
@@ -108,7 +108,7 @@ book[authorID="JGreen"]::before { content: "John Green"; }
 book[authorID="HSienkiewicz"]::before { content: "Henryk Sienkiewicz"; }
 
 book::after {
-    border: 4px solid white;
+    /*border: 4px solid white;*/
     display: block;
     margin: auto 0px;
     white-space: pre-wrap;
@@ -142,6 +142,7 @@ title {
     font-style: italic;
 }
 title::after {
+    font-style: normal;
     content: "\A" var(--arrow-up) " tytuł " var(--arrow-up) "\A " var(--arrow-down) " autor " var(--arrow-down);
 }
 
@@ -184,7 +185,7 @@ isbn {
 /* ------------------------------------------------------------------------------------------------------------------ */
 frontCover {
     display: block;
-    height: 15vh;
+    height: 100%;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
