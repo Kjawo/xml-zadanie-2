@@ -11,27 +11,27 @@
 <!ELEMENT authors (author)*>
 <!ELEMENT author (firstName|lastName|birthDate)*>
 <!ATTLIST author
-        authorID CDATA #REQUIRED>
+        authorID ID #REQUIRED>
 <!ELEMENT birthDate (#PCDATA)>
 <!ELEMENT genres (genre)*>
 <!ELEMENT genre (#PCDATA)>
 <!ATTLIST genre
-        genreID CDATA #REQUIRED>
+        genreID ID #REQUIRED>
 <!ELEMENT coverTypes (coverType)*>
 <!ELEMENT coverType (#PCDATA)>
 <!ATTLIST coverType
-        coverTypeID CDATA #REQUIRED>
+        coverTypeID ID #REQUIRED>
 <!ELEMENT publishers (publisher)*>
 <!ELEMENT publisher (#PCDATA)>
 <!ATTLIST publisher
-        publisherID CDATA #REQUIRED>
+        publisherID ID #REQUIRED>
 <!ELEMENT books (book)*>
 <!ELEMENT book (title|pages|publishYear|price|frontCover|isbn)*>
 <!ATTLIST book
-        authorID CDATA #REQUIRED
-        coverTypeID CDATA #REQUIRED
-        genreID CDATA #REQUIRED
-        publisherID CDATA #REQUIRED>
+        authorID IDREF #REQUIRED
+        coverTypeID IDREF #REQUIRED
+        genreID IDREF #REQUIRED
+        publisherID IDREF #REQUIRED>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT pages (#PCDATA)>
 <!ELEMENT publishYear (#PCDATA)>
