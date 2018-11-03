@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- File: xml-zadanie-2.xsd -->
+<!-- Authors: Konrad Jaworski, Tomasz Witczak -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- TODO: trzeba dać jakoś nasze nazwy typów w jakiegoś namespace tak myślę -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            attributeFormDefault="qualified">
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Root element -->
+    <xsd:element name="bookStore" type="_bookStore" />
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Document structure through types -->
+    <!-- > bookStore -->
+    <xsd:complexType name="_bookStore">
+        <xsd:sequence>
+            <xsd:element name="header" type="_header" />
+            <xsd:element name="authors" type="_authors" />
+            <xsd:element name="genres" type="_genres" />
+            <xsd:element name="coverTypes" type="_coverTypes" />
+            <xsd:element name="publishers" type="_publishers" />
+            <xsd:element name="books" type="_books" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <!-- > header -->
+    <xsd:complexType name="_header">
+        <xsd:sequence>
+            <xsd:element name="mainTitle" type="xsd:string" />
+            <xsd:element name="description" type="xsd:string" />
+            <xsd:element name="students" type="_students" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- > authors -->
+    <xsd:complexType name="_authors">
+        <xsd:sequence>
+            <xsd:element name="author" type="_author" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- > genres -->
+    <xsd:complexType name="_genres">
+        <xsd:sequence>
+            <xsd:element name="genre" type="genreType" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- > coverTypes -->
+    <xsd:complexType name="_coverTypes">
+        <xsd:sequence>
+            <xsd:element name="coverType" type="coverTypeType" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- > publishers -->
+    <xsd:complexType name="_publishers">
+        <xsd:sequence>
+            <xsd:element name="publisher" type="publisherType" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- > books -->
+    <xsd:complexType name="_books">
+        <xsd:sequence>
+            <xsd:element name="book" type="bookType" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Additional simple types -->
+    <xsd:simpleType name="_name">               <!-- generic name type, first letter in uppercase -->
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z][a-z]+" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="_studentNumber">      <!-- student number -->
+        <xsd:restriction base="xsd:integer">
+            <xsd:pattern value="[0-9]{6}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="_date">               <!-- date formatted like DAY-MONTH-YEAR -->
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([0][1-9]|[12][0-9]|[3][01])-([0][1-9]|[1][0-2])-([1-9][0-9]*)" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="_student">
+        <xsd:sequence>
+            <xsd:element name="firstName" type="_name" />
+            <xsd:element name="lastName" type="_name" />
+            <xsd:element name="indexNr" type="_studentNumber" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="_students">
+        <xsd:sequence>
+            <xsd:element name="student" type="_student" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+   
+
+    <!-- TODO -->
+    <xsd:complexType name="_author">
+        <xsd:sequence>
+            <xsd:element name="firstName">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Andrzej"/>
+                        <xsd:enumeration value="Stephen"/>
+                        <xsd:enumeration value="Umberto"/>
+                        <xsd:enumeration value="Bolesław"/>
+                        <xsd:enumeration value="George R.R."/>
+                        <xsd:enumeration value="John"/>
+                        <xsd:enumeration value="Henryk"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="lastName">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Sapkowski"/>
+                        <xsd:enumeration value="King"/>
+                        <xsd:enumeration value="Eco"/>
+                        <xsd:enumeration value="Prus"/>
+                        <xsd:enumeration value="Martin"/>
+                        <xsd:enumeration value="Green"/>
+                        <xsd:enumeration value="Sienkiewicz"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="birthDate" type="_date" />
+        </xsd:sequence>
+        <xsd:attribute type="xsd:string" name="authorID" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="genreType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute type="xsd:string" name="genreID" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="coverTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute type="xsd:string" name="coverTypeENUM" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="publisherType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute type="xsd:string" name="publisherID" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="frontCoverType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute type="xsd:string" name="src" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="bookType">
+        <xsd:sequence>
+            <xsd:element type="xsd:string" name="title"/>
+            <xsd:element type="xsd:string" name="pages"/>
+            <xsd:element type="xsd:string" name="publishYear"/>
+            <xsd:element type="xsd:string" name="price"/>
+            <xsd:element type="frontCoverType" name="frontCover"/>
+            <xsd:element type="xsd:string" name="isbn"/>
+        </xsd:sequence>
+        <xsd:attribute type="xsd:string" name="bookID" use="optional"/>
+        <xsd:attribute type="xsd:string" name="authorID" use="optional"/>
+        <xsd:attribute type="xsd:string" name="genreID" use="optional"/>
+        <xsd:attribute type="xsd:string" name="coverTypeENUM" use="optional"/>
+        <xsd:attribute type="xsd:string" name="publisherID" use="optional"/>
+    </xsd:complexType>
+    <!-- TODO -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</xsd:schema>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
