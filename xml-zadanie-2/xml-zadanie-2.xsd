@@ -3,83 +3,82 @@
 <!-- File: xml-zadanie-2.xsd -->
 <!-- Authors: Konrad Jaworski, Tomasz Witczak -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- TODO:  trzeba dać jakoś nasze nazwy typów w jakiegoś namespace tak myślę,
-            napisać odpowiednią kontrolę typów dla zawartości książek -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            elementFormDefault="qualified"
-            attributeFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="technologieXML-zad2-bookStore"
+            targetNamespace="technologieXML-zad2-bookStore"
+            elementFormDefault="qualified">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Root element and identity constraints -->
-    <xsd:element name="bookStore" type="_bookStore">
+    <xsd:element name="bookStore" type="tns:type_bookStore">
 
         <!-- > unique authors -->
         <xsd:key name="key_author">
-            <xsd:selector xpath="./authors/author" />
-            <xsd:field xpath="firstName" />
-            <xsd:field xpath="lastName" />
-            <xsd:field xpath="birthDate" />
+            <xsd:selector xpath="./tns:authors/tns:author" />
+            <xsd:field xpath="tns:firstName" />
+            <xsd:field xpath="tns:lastName" />
+            <xsd:field xpath="tns:birthDate" />
         </xsd:key>
         <xsd:key name="key_authorID">
-            <xsd:selector xpath="./authors/author" />
+            <xsd:selector xpath="./tns:authors/tns:author" />
             <xsd:field xpath="@authorID" />
         </xsd:key>
 
         <!-- > unique genres -->
         <xsd:key name="key_genre">
-            <xsd:selector xpath="./genres/genre" />
+            <xsd:selector xpath="./tns:genres/tns:genre" />
             <xsd:field xpath="." />
         </xsd:key>
         <xsd:key name="key_genreID">
-            <xsd:selector xpath="./genres/genre" />
+            <xsd:selector xpath="./tns:genres/tns:genre" />
             <xsd:field xpath="@genreID" />
         </xsd:key>
 
         <!-- > unique publishers -->
         <xsd:key name="key_publisher">
-            <xsd:selector xpath="./publishers/publisher" />
+            <xsd:selector xpath="./tns:publishers/tns:publisher" />
             <xsd:field xpath="." />
         </xsd:key>
         <xsd:key name="key_publisherID">
-            <xsd:selector xpath="./publishers/publisher" />
+            <xsd:selector xpath="./tns:publishers/tns:publisher" />
             <xsd:field xpath="@publisherID" />
         </xsd:key>
 
         <!-- > unique books -->
         <xsd:key name="key_book">
-            <xsd:selector xpath="./books/book" />
-            <xsd:field xpath="title" />
-            <xsd:field xpath="pages" />
-            <xsd:field xpath="publishYear" />
-            <xsd:field xpath="price" />
-            <xsd:field xpath="frontCover/@src" />
-            <xsd:field xpath="isbn" />
+            <xsd:selector xpath="./tns:books/tns:book" />
+            <xsd:field xpath="tns:title" />
+            <xsd:field xpath="tns:pages" />
+            <xsd:field xpath="tns:publishYear" />
+            <xsd:field xpath="tns:price" />
+            <xsd:field xpath="tns:frontCover/@src" />
+            <xsd:field xpath="tns:isbn" />
             <xsd:field xpath="@authorID" />
             <xsd:field xpath="@genreID" />
             <xsd:field xpath="@coverTypeENUM" />
             <xsd:field xpath="@publisherID" />
         </xsd:key>
         <xsd:key name="key_bookID">
-            <xsd:selector xpath="./books/book" />
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@bookID" />
         </xsd:key>
-        <xsd:keyref name="ref_authorID" refer="key_authorID">
-            <xsd:selector xpath="./books/book" />
+        <xsd:keyref name="ref_authorID" refer="tns:key_authorID">
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@authorID" />
         </xsd:keyref>
-        <xsd:keyref name="ref_genre" refer="key_genre">
-            <xsd:selector xpath="./books/book" />
+        <xsd:keyref name="ref_genre" refer="tns:key_genre">
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@genreID" />
         </xsd:keyref>
-        <xsd:keyref name="ref_genreID" refer="key_genreID">
-            <xsd:selector xpath="./books/book" />
+        <xsd:keyref name="ref_genreID" refer="tns:key_genreID">
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@genreID" />
         </xsd:keyref>
-        <xsd:keyref name="ref_publisher" refer="key_publisher">
-            <xsd:selector xpath="./books/book" />
+        <xsd:keyref name="ref_publisher" refer="tns:key_publisher">
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@publisherID" />
         </xsd:keyref>
-        <xsd:keyref name="ref_publisherID" refer="key_publisherID">
-            <xsd:selector xpath="./books/book" />
+        <xsd:keyref name="ref_publisherID" refer="tns:key_publisherID">
+            <xsd:selector xpath="./tns:books/tns:book" />
             <xsd:field xpath="@publisherID" />
         </xsd:keyref>
 
@@ -88,7 +87,7 @@
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Groups -->
-    <xsd:group name="fullName">
+    <xsd:group name="group_fullName">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">
                 Full name consists of:
@@ -97,8 +96,8 @@
             </xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="firstName" type="_name" />
-            <xsd:element name="lastName" type="_name" />
+            <xsd:element name="firstName" type="tns:type_name" />
+            <xsd:element name="lastName" type="tns:type_name" />
         </xsd:sequence>
     </xsd:group>
 
@@ -106,131 +105,131 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Document structure through types -->
     <!-- > bookStore -->
-    <xsd:complexType name="_bookStore">
+    <xsd:complexType name="type_bookStore">
         <xsd:sequence>
-            <xsd:element name="header" type="_header" />
-            <xsd:element name="authors" type="_authors" />
-            <xsd:element name="genres" type="_genres" />
-            <xsd:element name="coverTypes" type="_coverTypes" />
-            <xsd:element name="publishers" type="_publishers" />
-            <xsd:element name="books" type="_books" />
+            <xsd:element name="header" type="tns:type_header" />
+            <xsd:element name="authors" type="tns:type_authors" />
+            <xsd:element name="genres" type="tns:type_genres" />
+            <xsd:element name="coverTypes" type="tns:type_coverTypes" />
+            <xsd:element name="publishers" type="tns:type_publishers" />
+            <xsd:element name="books" type="tns:type_books" />
         </xsd:sequence>
     </xsd:complexType>
 
         <!-- > header -->
-        <xsd:complexType name="_header">
+        <xsd:complexType name="type_header">
             <xsd:sequence>
                 <xsd:element name="mainTitle" type="xsd:string" />
                 <xsd:element name="description" type="xsd:string" />
-                <xsd:element name="students" type="_students" />
+                <xsd:element name="students" type="tns:type_students" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > students -->
-            <xsd:complexType name="_students">
+            <xsd:complexType name="type_students">
                 <xsd:sequence>
-                    <xsd:element name="student" type="_student" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element name="student" type="tns:type_student" minOccurs="0" maxOccurs="unbounded" />
                 </xsd:sequence>
             </xsd:complexType>
 
                 <!-- > student -->
-                <xsd:complexType name="_student">
+                <xsd:complexType name="type_student">
                     <xsd:sequence>
-                        <xsd:group ref="fullName"/>
-                        <xsd:element name="indexNr" type="_studentNumber" />
+                        <xsd:group ref="tns:group_fullName" />
+                        <xsd:element name="indexNr" type="tns:type_studentNumber" />
                     </xsd:sequence>
                 </xsd:complexType>
 
         <!-- > authors -->
-        <xsd:complexType name="_authors">
+        <xsd:complexType name="type_authors">
             <xsd:sequence>
-                <xsd:element name="author" type="_author" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="author" type="tns:type_author" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > author -->
-            <xsd:complexType name="_author">
+            <xsd:complexType name="type_author">
                 <xsd:sequence>
-                    <xsd:group ref="fullName"/>
-                    <xsd:element name="birthDate" type="_date" />
+                    <xsd:group ref="tns:group_fullName" />
+                    <xsd:element name="birthDate" type="tns:type_date" />
                 </xsd:sequence>
-                <xsd:attribute name="authorID" type="_name" use="required" />
+                <xsd:attribute name="authorID" type="tns:type_name" use="required" />
             </xsd:complexType>
 
         <!-- > genres -->
-        <xsd:complexType name="_genres">
+        <xsd:complexType name="type_genres">
             <xsd:sequence>
-                <xsd:element name="genre" type="_genre" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="genre" type="tns:type_genre" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > genre -->
-            <xsd:complexType name="_genre">
+            <xsd:complexType name="type_genre">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute name="genreID" type="_textwithpunctation" use="required" />
+                        <xsd:attribute name="genreID" type="tns:type_textWithPunctuation" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
 
         <!-- > coverTypes -->
-        <xsd:complexType name="_coverTypes">
+        <xsd:complexType name="type_coverTypes">
             <xsd:sequence>
-                <xsd:element name="coverType" type="_coverType" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="coverType" type="tns:type_coverType" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > coverType -->
-            <xsd:complexType name="_coverType">
+            <xsd:complexType name="type_coverType">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute type="_coverTypeENUM" name="coverTypeENUM" use="required" />
+                        <xsd:attribute type="tns:type_coverTypeENUM" name="coverTypeENUM" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
 
         <!-- > publishers -->
-        <xsd:complexType name="_publishers">
+        <xsd:complexType name="type_publishers">
             <xsd:sequence>
-                <xsd:element name="publisher" type="_publisher" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="publisher" type="tns:type_publisher" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > publisher -->
-            <xsd:complexType name="_publisher">
+            <xsd:complexType name="type_publisher">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute name="publisherID" type="_textwithpunctation" use="required" />
+                        <xsd:attribute name="publisherID" type="tns:type_textWithPunctuation" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
 
         <!-- > books -->
-        <xsd:complexType name="_books">
+        <xsd:complexType name="type_books">
             <xsd:sequence>
-                <xsd:element name="book" type="_book" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="book" type="tns:type_book" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
 
             <!-- > book -->
-            <xsd:complexType name="_book">
+            <xsd:complexType name="type_book">
                 <xsd:sequence>
-                    <xsd:element name="title" type="_title" />
+                    <xsd:element name="title" type="tns:type_title" />
                     <xsd:element name="pages" type="xsd:nonNegativeInteger" />
-                    <xsd:element name="publishYear" type="xsd:integer" />
+                    <xsd:element name="publishYear" type="xsd:gYear" />
                     <xsd:element name="price" type="xsd:decimal" />
-                    <xsd:element name="frontCover" type="_frontCover" />
-                    <xsd:element name="isbn" type="_isbn" />
+                    <xsd:element name="frontCover" type="tns:type_frontCover" />
+                    <xsd:element name="isbn" type="tns:type_isbn" />
                 </xsd:sequence>
                 <xsd:attribute name="bookID" type="xsd:nonNegativeInteger" use="required" />
-                <xsd:attribute name="authorID" type="_name" use="optional" />
-                <xsd:attribute name="genreID" type="_textwithpunctation" use="required" />
-                <xsd:attribute name="coverTypeENUM" type="_coverTypeENUM" use="optional" />
-                <xsd:attribute name="publisherID" type="xsd:string" use="optional" />
+                <xsd:attribute name="authorID" type="tns:type_name" use="required" />
+                <xsd:attribute name="genreID" type="tns:type_textWithPunctuation" use="required" />
+                <xsd:attribute name="coverTypeENUM" type="tns:type_coverTypeENUM" use="required" />
+                <xsd:attribute name="publisherID" type="xsd:string" use="required" />
             </xsd:complexType>
 
                 <!-- > frontCover -->
-                <xsd:complexType name="_frontCover">
+                <xsd:complexType name="type_frontCover">
                     <xsd:simpleContent>
                         <xsd:extension base="xsd:string">
                             <xsd:attribute name="src" type="xsd:string" use="required" />
@@ -240,42 +239,44 @@
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Additional simple types -->
-
-    <xsd:simpleType name="_coverTypeENUM">
+    <xsd:simpleType name="type_coverTypeENUM">
         <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="paperback"/>
-            <xsd:enumeration value="hardback"/>
+            <xsd:enumeration value="paperback" />
+            <xsd:enumeration value="hardback" />
         </xsd:restriction>
     </xsd:simpleType>
-    <xsd:simpleType name="_textwithpunctation">
+
+    <xsd:simpleType name="type_textWithPunctuation">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="(\p{L}|\s|\p{P})+" />
         </xsd:restriction>
     </xsd:simpleType>
-    <xsd:simpleType name="_title">
+
+    <xsd:simpleType name="type_title">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="\p{Lu}(\p{L}|\s|\p{P})+" />
         </xsd:restriction>
     </xsd:simpleType>
-    <xsd:simpleType name="_name">               <!-- generic name type, first letter in uppercase -->
+
+    <xsd:simpleType name="type_name">               <!-- generic name type, first letter in uppercase -->
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="\p{Lu}\p{L}+" />
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="_studentNumber">      <!-- student number -->
+    <xsd:simpleType name="type_studentNumber">      <!-- student number -->
         <xsd:restriction base="xsd:integer">
             <xsd:pattern value="[0-9]{6}" />
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="_date">               <!-- date formatted like DAY-MONTH-YEAR -->
+    <xsd:simpleType name="type_date">               <!-- date formatted like DAY-MONTH-YEAR -->
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="([0][1-9]|[12][0-9]|[3][01])-([0][1-9]|[1][0-2])-([1-9][0-9]*)" />
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="_isbn">
+    <xsd:simpleType name="type_isbn">
         <xsd:restriction base="xsd:string">
             <!-- TODO --> <xsd:pattern value="(\c{17})|(\c{13})" />
         </xsd:restriction>

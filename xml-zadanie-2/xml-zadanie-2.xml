@@ -3,8 +3,9 @@
 <!-- File: xml-zadanie-2.xml -->
 <!-- Authors: Konrad Jaworski, Tomasz Witczak -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<bookStore  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="xml-zadanie-2.xsd">
+<bookStore xmlns="technologieXML-zad2-bookStore"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="technologieXML-zad2-bookStore xml-zadanie-2.xsd">
     <header>
         <mainTitle>INWENTARZ KSIĄŻEK</mainTitle>
         <description>Technologie XML - FTIMS 2018/19</description>
