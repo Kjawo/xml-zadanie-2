@@ -54,7 +54,7 @@
             <xsd:field xpath="tns:isbn" />
             <xsd:field xpath="@authorID" />
             <xsd:field xpath="@genreID" />
-            <xsd:field xpath="@coverTypeENUM" />
+            <xsd:field xpath="@coverTypeID" />
             <xsd:field xpath="@publisherID" />
         </xsd:key>
         <xsd:key name="key_bookID">
@@ -183,7 +183,7 @@
             <xsd:complexType name="type_coverType">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute type="tns:type_coverTypeENUM" name="coverTypeENUM" use="required" />
+                        <xsd:attribute name="coverTypeID" type="tns:type_coverTypeID" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
@@ -224,7 +224,7 @@
                 <xsd:attribute name="bookID" type="xsd:nonNegativeInteger" use="required" />
                 <xsd:attribute name="authorID" type="tns:type_name" use="required" />
                 <xsd:attribute name="genreID" type="tns:type_textWithPunctuation" use="required" />
-                <xsd:attribute name="coverTypeENUM" type="tns:type_coverTypeENUM" use="required" />
+                <xsd:attribute name="coverTypeID" type="tns:type_coverTypeID" use="required" />
                 <xsd:attribute name="publisherID" type="xsd:string" use="required" />
             </xsd:complexType>
 
@@ -239,7 +239,7 @@
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Additional simple types -->
-    <xsd:simpleType name="type_coverTypeENUM">
+    <xsd:simpleType name="type_coverTypeID">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="paperback" />
             <xsd:enumeration value="hardback" />

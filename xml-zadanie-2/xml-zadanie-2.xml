@@ -69,8 +69,8 @@
     </genres>
 
     <coverTypes>
-        <coverType coverTypeENUM="paperback">paperback</coverType>
-        <coverType coverTypeENUM="hardback">hardback</coverType>
+        <coverType coverTypeID="paperback">paperback</coverType>
+        <coverType coverTypeID="hardback">hardback</coverType>
     </coverTypes>
 
     <publishers>
@@ -87,7 +87,7 @@
 
     <books>
         <book bookID="1" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Ostatnie Życzenie</title>
             <pages>288</pages>
             <publishYear>1993</publishYear>
@@ -96,7 +96,7 @@
             <isbn>978-0-575-08244-1</isbn>
         </book>
         <book bookID="2" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Miecz przeznaczenia</title>
             <pages>384</pages>
             <publishYear>1992</publishYear>
@@ -105,7 +105,7 @@
             <isbn>978-1-4732-1153-7</isbn>
         </book>
         <book bookID="3" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="superNOWA">
+              coverTypeID="hardback" publisherID="superNOWA">
             <title>Krew elfów</title>
             <pages>320</pages>
             <publishYear>1994</publishYear>
@@ -114,7 +114,7 @@
             <isbn>978-0-575-08484-1</isbn>
         </book>
         <book bookID="4" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Czas pogardy</title>
             <pages>352</pages>
             <publishYear>1995</publishYear>
@@ -123,7 +123,7 @@
             <isbn>978-0-575-09094-1</isbn>
         </book>
         <book bookID="5" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Chrzest ognia</title>
             <pages>352</pages>
             <publishYear>1996</publishYear>
@@ -132,7 +132,7 @@
             <isbn>978-0-575-09097-2</isbn>
         </book>
         <book bookID="6" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Wieża Jaskółki</title>
             <pages>462</pages>
             <publishYear>1997</publishYear>
@@ -141,7 +141,7 @@
             <isbn>978-0-575-09083-3</isbn>
         </book>
         <book bookID="7" authorID="ASapkowski" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="superNOWA">
+              coverTypeID="paperback" publisherID="superNOWA">
             <title>Pani Jeziora</title>
             <pages>544</pages>
             <publishYear>1999</publishYear>
@@ -150,7 +150,7 @@
             <isbn>978-0-575-09084-4</isbn>
         </book>
         <book bookID="8" authorID="SKing" genreID="horror"
-              coverTypeENUM="paperback" publisherID="Viking">
+              coverTypeID="paperback" publisherID="Viking">
             <title>It</title>
             <pages>1376</pages>
             <publishYear>1986</publishYear>
@@ -159,7 +159,7 @@
             <isbn>0-670-81302-8</isbn>
         </book>
         <book bookID="9" authorID="SKing" genreID="horror"
-              coverTypeENUM="paperback" publisherID="Doubleday">
+              coverTypeID="paperback" publisherID="Doubleday">
             <title>The Shining</title>
             <pages>447</pages>
             <publishYear>1977</publishYear>
@@ -168,7 +168,7 @@
             <isbn>978-0-385-12167-5</isbn>
         </book>
         <book bookID="10" authorID="SKing" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="Signet">
+              coverTypeID="hardback" publisherID="Signet">
             <title>The Green Mile</title>
             <pages>416</pages>
             <publishYear>1996</publishYear>
@@ -177,7 +177,7 @@
             <isbn>2-525-67882-7</isbn>
         </book>
         <book bookID="11" authorID="UEco" genreID="kryminał"
-              coverTypeENUM="hardback" publisherID="Bompiani">
+              coverTypeID="hardback" publisherID="Bompiani">
             <title>The Name of the Rose</title>
             <pages>512</pages>
             <publishYear>1980</publishYear>
@@ -186,7 +186,7 @@
             <isbn>0-15-144647-4</isbn>
         </book>
         <book bookID="12" authorID="BPrus" genreID="powieść"
-              coverTypeENUM="paperback" publisherID="Gebethner-Wolff">
+              coverTypeID="paperback" publisherID="Gebethner-Wolff">
             <title>Lalka</title>
             <pages>664</pages>
             <publishYear>1890</publishYear>
@@ -195,7 +195,7 @@
             <isbn>83-01-05734-3</isbn>
         </book>
         <book bookID="13" authorID="GRRMartin" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="Zysk">
+              coverTypeID="hardback" publisherID="Zysk">
             <title>A Game of Thrones</title>
             <pages>684</pages>
             <publishYear>1996</publishYear>
@@ -204,7 +204,7 @@
             <isbn>0-553-10354-7</isbn>
         </book>
         <book bookID="14" authorID="GRRMartin" genreID="fantasy"
-              coverTypeENUM="paperback" publisherID="Zysk">
+              coverTypeID="paperback" publisherID="Zysk">
             <title>A Clash of Kings</title>
             <pages>768</pages>
             <publishYear>1999</publishYear>
@@ -213,7 +213,7 @@
             <isbn>0-553-10803-4</isbn>
         </book>
         <book bookID="15" authorID="GRRMartin" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="Zysk">
+              coverTypeID="hardback" publisherID="Zysk">
             <title>A Storm of Swords</title>
             <pages>973</pages>
             <publishYear>2000</publishYear>
@@ -222,7 +222,7 @@
             <isbn>0-553-10663-5</isbn>
         </book>
         <book bookID="16" authorID="GRRMartin" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="Zysk">
+              coverTypeID="hardback" publisherID="Zysk">
             <title>A Feast for Crows</title>
             <pages>753</pages>
             <publishYear>2005</publishYear>
@@ -231,7 +231,7 @@
             <isbn>0-553-80150-3</isbn>
         </book>
         <book bookID="17" authorID="GRRMartin" genreID="fantasy"
-              coverTypeENUM="hardback" publisherID="Zysk">
+              coverTypeID="hardback" publisherID="Zysk">
             <title>A Dance with Dragons</title>
             <pages>1056</pages>
             <publishYear>2011</publishYear>
@@ -240,7 +240,7 @@
             <isbn>0-526-47181-7</isbn>
         </book>
         <book bookID="18" authorID="JGreen" genreID="powieść"
-              coverTypeENUM="paperback" publisherID="Dutton">
+              coverTypeID="paperback" publisherID="Dutton">
             <title>The Fault in Our Stars</title>
             <pages>313</pages>
             <publishYear>2012</publishYear>
@@ -249,7 +249,7 @@
             <isbn>0-525-47881-7</isbn>
         </book>
         <book bookID="19" authorID="HSienkiewicz" genreID="powieść"
-              coverTypeENUM="paperback" publisherID="Greg">
+              coverTypeID="paperback" publisherID="Greg">
             <title>Ogniem i mieczem</title>
             <pages>844</pages>
             <publishYear>1884</publishYear>
@@ -258,7 +258,7 @@
             <isbn>918-3-555-09083-1</isbn>
         </book>
         <book bookID="20" authorID="HSienkiewicz" genreID="powieść"
-              coverTypeENUM="paperback" publisherID="Greg">
+              coverTypeID="paperback" publisherID="Greg">
             <title>Potop</title>
             <pages>936</pages>
             <publishYear>1886</publishYear>
@@ -267,7 +267,7 @@
             <isbn>918-3-555-09083-2</isbn>
         </book>
         <book bookID="21" authorID="HSienkiewicz" genreID="powieść"
-              coverTypeENUM="paperback" publisherID="Greg">
+              coverTypeID="paperback" publisherID="Greg">
             <title>Pan Wołodyjowski</title>
             <pages>400</pages>
             <publishYear>1887</publishYear>
