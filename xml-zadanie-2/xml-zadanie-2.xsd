@@ -89,6 +89,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Groups -->
     <xsd:group name="fullName">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Full name consists of:
+                - first name
+                - last name
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="firstName" type="_name" />
             <xsd:element name="lastName" type="_name" />
@@ -236,7 +243,8 @@
 
     <xsd:simpleType name="_coverTypeENUM">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="paperback|hardback" />
+            <xsd:enumeration value="paperback"/>
+            <xsd:enumeration value="hardback"/>
         </xsd:restriction>
     </xsd:simpleType>
     <xsd:simpleType name="_textwithpunctation">
