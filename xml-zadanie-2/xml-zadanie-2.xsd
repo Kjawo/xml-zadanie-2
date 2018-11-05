@@ -139,7 +139,7 @@
                     <xsd:element name="lastName" type="_name" />
                     <xsd:element name="birthDate" type="_date" />
                 </xsd:sequence>
-                <xsd:attribute name="authorID" type="xsd:string" use="required" />
+                <xsd:attribute name="authorID" type="_name" use="required" />
             </xsd:complexType>
 
         <!-- > genres -->
@@ -153,7 +153,7 @@
             <xsd:complexType name="_genre">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute name="genreID" type="xsd:string" use="required" />
+                        <xsd:attribute name="genreID" type="_textwithpunctation" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
@@ -169,7 +169,7 @@
             <xsd:complexType name="_coverType">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute type="xsd:string" name="coverTypeENUM" use="required" />
+                        <xsd:attribute type="_coverTypeENUM" name="coverTypeENUM" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
@@ -185,7 +185,7 @@
             <xsd:complexType name="_publisher">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute name="publisherID" type="xsd:string" use="required" />
+                        <xsd:attribute name="publisherID" type="_textwithpunctation" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
@@ -207,11 +207,11 @@
                     <xsd:element name="frontCover" type="_frontCover" />
                     <xsd:element name="isbn" type="_isbn" />
                 </xsd:sequence>
-                <xsd:attribute name="bookID" type="xsd:string" use="required" />
-                <xsd:attribute name="authorID" type="xsd:string" use="required" />
-                <xsd:attribute name="genreID" type="xsd:string" use="required" />
-                <xsd:attribute name="coverTypeENUM" type="xsd:string" use="required" />
-                <xsd:attribute name="publisherID" type="xsd:string" use="required" />
+                <xsd:attribute name="bookID" type="xsd:nonNegativeInteger" use="required" />
+                <xsd:attribute name="authorID" type="_name" use="optional" />
+                <xsd:attribute name="genreID" type="_textwithpunctation" use="required" />
+                <xsd:attribute name="coverTypeENUM" type="_coverTypeENUM" use="optional" />
+                <xsd:attribute name="publisherID" type="xsd:string" use="optional" />
             </xsd:complexType>
 
                 <!-- > frontCover -->
@@ -225,6 +225,17 @@
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Additional simple types -->
+
+    <xsd:simpleType name="_coverTypeENUM">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="paperback|hardback" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="_textwithpunctation">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(\p{L}|\s|\p{P})+" />
+        </xsd:restriction>
+    </xsd:simpleType>
     <xsd:simpleType name="_title">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="\p{Lu}(\p{L}|\s|\p{P})+" />

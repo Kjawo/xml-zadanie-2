@@ -173,7 +173,7 @@
             <publishYear>1996</publishYear>
             <price>41.49</price>
             <frontCover src="TheGreenMile.jpg"/>
-            <isbn>978-0743210898</isbn>
+            <isbn>2-525-67882-7</isbn>
         </book>
         <book bookID="11" authorID="UEco" genreID="kryminał"
               coverTypeENUM="hardback" publisherID="Bompiani">
@@ -236,7 +236,7 @@
             <publishYear>2011</publishYear>
             <price>55.67</price>
             <frontCover src="ADanceWithDragons.jpg"/>
-            <isbn>978-0553801477</isbn>
+            <isbn>0-526-47181-7</isbn>
         </book>
         <book bookID="18" authorID="JGreen" genreID="powieść"
               coverTypeENUM="paperback" publisherID="Dutton">
