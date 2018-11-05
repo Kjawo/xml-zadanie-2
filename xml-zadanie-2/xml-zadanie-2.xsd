@@ -5,7 +5,7 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- TODO:  trzeba dać jakoś nasze nazwy typów w jakiegoś namespace tak myślę,
             napisać odpowiednią kontrolę typów dla zawartości książek -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified"
             attributeFormDefault="qualified">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -87,6 +87,16 @@
     </xsd:element>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Groups -->
+    <xsd:group name="fullName">
+        <xsd:sequence>
+            <xsd:element name="firstName" type="_name" />
+            <xsd:element name="lastName" type="_name" />
+        </xsd:sequence>
+    </xsd:group>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Document structure through types -->
     <!-- > bookStore -->
     <xsd:complexType name="_bookStore">
@@ -119,8 +129,7 @@
                 <!-- > student -->
                 <xsd:complexType name="_student">
                     <xsd:sequence>
-                        <xsd:element name="firstName" type="_name" />
-                        <xsd:element name="lastName" type="_name" />
+                        <xsd:group ref="fullName"/>
                         <xsd:element name="indexNr" type="_studentNumber" />
                     </xsd:sequence>
                 </xsd:complexType>
@@ -135,8 +144,7 @@
             <!-- > author -->
             <xsd:complexType name="_author">
                 <xsd:sequence>
-                    <xsd:element name="firstName" type="_name" />
-                    <xsd:element name="lastName" type="_name" />
+                    <xsd:group ref="fullName"/>
                     <xsd:element name="birthDate" type="_date" />
                 </xsd:sequence>
                 <xsd:attribute name="authorID" type="_name" use="required" />
