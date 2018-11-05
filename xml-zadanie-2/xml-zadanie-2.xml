@@ -44,7 +44,7 @@
             <birthDate>20-08-1847</birthDate>
         </author>
         <author authorID="GRRMartin">
-            <firstName>George R.R.</firstName>
+            <firstName>George</firstName>
             <lastName>Martin</lastName>
             <birthDate>21-06-1948</birthDate>
         </author>
@@ -90,7 +90,7 @@
             <title>Ostatnie Życzenie</title>
             <pages>288</pages>
             <publishYear>1993</publishYear>
-            <price>35,99</price>
+            <price>35.99</price>
             <frontCover src="OstatnieZyczenie.jpg"/>
             <isbn>978-0-575-08244-1</isbn>
         </book>
@@ -99,7 +99,7 @@
             <title>Miecz przeznaczenia</title>
             <pages>384</pages>
             <publishYear>1992</publishYear>
-            <price>35,99</price>
+            <price>35.99</price>
             <frontCover src="MieczPrzeznaczenia.jpg"/>
             <isbn>978-1-4732-1153-7</isbn>
         </book>
@@ -108,7 +108,7 @@
             <title>Krew elfów</title>
             <pages>320</pages>
             <publishYear>1994</publishYear>
-            <price>39,99</price>
+            <price>39.99</price>
             <frontCover src="KrewElfow.jpg"/>
             <isbn>978-0-575-08484-1</isbn>
         </book>
@@ -117,7 +117,7 @@
             <title>Czas pogardy</title>
             <pages>352</pages>
             <publishYear>1995</publishYear>
-            <price>35,99</price>
+            <price>35.99</price>
             <frontCover src="CzasPogardy.jpg"/>
             <isbn>978-0-575-09094-1</isbn>
         </book>
@@ -126,7 +126,7 @@
             <title>Chrzest ognia</title>
             <pages>352</pages>
             <publishYear>1996</publishYear>
-            <price>35,99</price>
+            <price>35.99</price>
             <frontCover src="ChrzestOgnia.jpg"/>
             <isbn>978-0-575-09097-2</isbn>
         </book>
@@ -135,7 +135,7 @@
             <title>Wieża Jaskółki</title>
             <pages>462</pages>
             <publishYear>1997</publishYear>
-            <price>35,99</price>
+            <price>35.99</price>
             <frontCover src="WiezaJaskolki.jpg"/>
             <isbn>978-0-575-09083-3</isbn>
         </book>
@@ -144,7 +144,7 @@
             <title>Pani Jeziora</title>
             <pages>544</pages>
             <publishYear>1999</publishYear>
-            <price>38,99</price>
+            <price>38.99</price>
             <frontCover src="PaniJeziora.jpg"/>
             <isbn>978-0-575-09084-4</isbn>
         </book>
@@ -153,7 +153,7 @@
             <title>It</title>
             <pages>1376</pages>
             <publishYear>1986</publishYear>
-            <price>45,49</price>
+            <price>45.49</price>
             <frontCover src="It.jpg"/>
             <isbn>0-670-81302-8</isbn>
         </book>
@@ -162,7 +162,7 @@
             <title>The Shining</title>
             <pages>447</pages>
             <publishYear>1977</publishYear>
-            <price>30,49</price>
+            <price>30.49</price>
             <frontCover src="TheShinning.jpg"/>
             <isbn>978-0-385-12167-5</isbn>
         </book>
@@ -171,7 +171,7 @@
             <title>The Green Mile</title>
             <pages>416</pages>
             <publishYear>1996</publishYear>
-            <price>41,49</price>
+            <price>41.49</price>
             <frontCover src="TheGreenMile.jpg"/>
             <isbn>978-0743210898</isbn>
         </book>
@@ -180,7 +180,7 @@
             <title>The Name of the Rose</title>
             <pages>512</pages>
             <publishYear>1980</publishYear>
-            <price>49,99</price>
+            <price>49.99</price>
             <frontCover src="TheNameoftheRose.jpg"/>
             <isbn>0-15-144647-4</isbn>
         </book>
@@ -189,7 +189,7 @@
             <title>Lalka</title>
             <pages>664</pages>
             <publishYear>1890</publishYear>
-            <price>23,23</price>
+            <price>23.23</price>
             <frontCover src="Lalka.jpg"/>
             <isbn>83-01-05734-3</isbn>
         </book>
@@ -198,7 +198,7 @@
             <title>A Game of Thrones</title>
             <pages>684</pages>
             <publishYear>1996</publishYear>
-            <price>41,49</price>
+            <price>41.49</price>
             <frontCover src="AGameOfThrones.jpg"/>
             <isbn>0-553-10354-7</isbn>
         </book>
@@ -207,7 +207,7 @@
             <title>A Clash of Kings</title>
             <pages>768</pages>
             <publishYear>1999</publishYear>
-            <price>35,49</price>
+            <price>35.49</price>
             <frontCover src="AClashOfKings.jpg"/>
             <isbn>0-553-10803-4</isbn>
         </book>
@@ -216,7 +216,7 @@
             <title>A Storm of Swords</title>
             <pages>973</pages>
             <publishYear>2000</publishYear>
-            <price>39,99</price>
+            <price>39.99</price>
             <frontCover src="AStormOfSwords.jpg"/>
             <isbn>0-553-10663-5</isbn>
         </book>
@@ -225,7 +225,7 @@
             <title>A Feast for Crows</title>
             <pages>753</pages>
             <publishYear>2005</publishYear>
-            <price>42,57</price>
+            <price>42.57</price>
             <frontCover src="AFeastForCrows.jpg"/>
             <isbn>0-553-80150-3</isbn>
         </book>
@@ -234,7 +234,7 @@
             <title>A Dance with Dragons</title>
             <pages>1056</pages>
             <publishYear>2011</publishYear>
-            <price>55,67</price>
+            <price>55.67</price>
             <frontCover src="ADanceWithDragons.jpg"/>
             <isbn>978-0553801477</isbn>
         </book>
@@ -243,7 +243,7 @@
             <title>The Fault in Our Stars</title>
             <pages>313</pages>
             <publishYear>2012</publishYear>
-            <price>30,27</price>
+            <price>30.27</price>
             <frontCover src="TheFaultInOurStars.jpg"/>
             <isbn>0-525-47881-7</isbn>
         </book>
@@ -252,7 +252,7 @@
             <title>Ogniem i mieczem</title>
             <pages>844</pages>
             <publishYear>1884</publishYear>
-            <price>20,27</price>
+            <price>20.27</price>
             <frontCover src="OgniemIMieczem.jpg"/>
             <isbn>918-3-555-09083-1</isbn>
         </book>
@@ -261,7 +261,7 @@
             <title>Potop</title>
             <pages>936</pages>
             <publishYear>1886</publishYear>
-            <price>29,87</price>
+            <price>29.87</price>
             <frontCover src="Potop.jpg"/>
             <isbn>918-3-555-09083-2</isbn>
         </book>
@@ -270,7 +270,7 @@
             <title>Pan Wołodyjowski</title>
             <pages>400</pages>
             <publishYear>1887</publishYear>
-            <price>10,36</price>
+            <price>10.36</price>
             <frontCover src="PanWolodyjowski.jpg"/>
             <isbn>918-3-555-09083-3</isbn>
         </book>

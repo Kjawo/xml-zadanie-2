@@ -99,7 +99,7 @@
             <xsd:element name="books" type="_books" />
         </xsd:sequence>
     </xsd:complexType>
-    
+
         <!-- > header -->
         <xsd:complexType name="_header">
             <xsd:sequence>
@@ -200,10 +200,10 @@
             <!-- > book -->
             <xsd:complexType name="_book">
                 <xsd:sequence>
-                    <xsd:element name="title" type="xsd:string" />
-                    <xsd:element name="pages" type="xsd:string" />
-                    <xsd:element name="publishYear" type="xsd:string" />
-                    <xsd:element name="price" type="xsd:string" />
+                    <xsd:element name="title" type="_title" />
+                    <xsd:element name="pages" type="xsd:nonNegativeInteger" />
+                    <xsd:element name="publishYear" type="xsd:integer" />
+                    <xsd:element name="price" type="xsd:decimal" />
                     <xsd:element name="frontCover" type="_frontCover" />
                     <xsd:element name="isbn" type="_isbn" />
                 </xsd:sequence>
@@ -222,12 +222,17 @@
                         </xsd:extension>
                     </xsd:simpleContent>
                 </xsd:complexType>
-    
+
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Additional simple types -->
+    <xsd:simpleType name="_title">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\p{Lu}(\p{L}|\s|\p{P})+" />
+        </xsd:restriction>
+    </xsd:simpleType>
     <xsd:simpleType name="_name">               <!-- generic name type, first letter in uppercase -->
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="[A-Z][a-z]+" />
+            <xsd:pattern value="\p{Lu}\p{L}+" />
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -236,19 +241,19 @@
             <xsd:pattern value="[0-9]{6}" />
         </xsd:restriction>
     </xsd:simpleType>
-    
+
     <xsd:simpleType name="_date">               <!-- date formatted like DAY-MONTH-YEAR -->
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="([0][1-9]|[12][0-9]|[3][01])-([0][1-9]|[1][0-2])-([1-9][0-9]*)" />
         </xsd:restriction>
     </xsd:simpleType>
-    
+
     <xsd:simpleType name="_isbn">
         <xsd:restriction base="xsd:string">
             <!-- TODO --> <xsd:pattern value="(\c{17})|(\c{13})" />
         </xsd:restriction>
     </xsd:simpleType>
-    
+
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 </xsd:schema>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
