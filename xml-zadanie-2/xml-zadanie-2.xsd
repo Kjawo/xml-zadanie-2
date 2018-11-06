@@ -166,7 +166,7 @@
             <!-- > genre -->
             <xsd:complexType name="type_genre">
                 <xsd:simpleContent>
-                    <xsd:extension base="xsd:string">
+                    <xsd:extension base="tns:type_textWithPunctuation">
                         <xsd:attribute name="genreID" type="tns:type_textWithPunctuation" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
@@ -182,7 +182,7 @@
             <!-- > coverType -->
             <xsd:complexType name="type_coverType">
                 <xsd:simpleContent>
-                    <xsd:extension base="xsd:string">
+                    <xsd:extension base="tns:type_coverTypeID">
                         <xsd:attribute name="coverTypeID" type="tns:type_coverTypeID" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
@@ -199,7 +199,7 @@
             <xsd:complexType name="type_publisher">
                 <xsd:simpleContent>
                     <xsd:extension base="xsd:string">
-                        <xsd:attribute name="publisherID" type="tns:type_textWithPunctuation" use="required" />
+                        <xsd:attribute name="publisherID" type="xsd:string" use="required" />
                     </xsd:extension>
                 </xsd:simpleContent>
             </xsd:complexType>
@@ -255,7 +255,7 @@
 
     <xsd:simpleType name="type_title">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="\p{Lu}(\p{L}|\s|\p{P})+" />
+            <xsd:pattern value="(\p{Lu}|\p{N})(\p{L}|\s|\p{P}|\p{N})+" />
         </xsd:restriction>
     </xsd:simpleType>
 
