@@ -93,7 +93,7 @@
             <publishYear>1993</publishYear>
             <price>35.99</price>
             <frontCover src="OstatnieZyczenie.jpg"/>
-            <isbn>978-0-575-08244-1</isbn>
+            <isbn>978-0-5754-08244-1</isbn>
         </book>
         <book bookID="2" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="paperback" publisherID="superNOWA">
@@ -102,7 +102,7 @@
             <publishYear>1992</publishYear>
             <price>35.99</price>
             <frontCover src="MieczPrzeznaczenia.jpg"/>
-            <isbn>978-1-4732-1153-7</isbn>
+            <isbn>978-1-4732-11532-7</isbn>
         </book>
         <book bookID="3" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="hardback" publisherID="superNOWA">
@@ -111,7 +111,7 @@
             <publishYear>1994</publishYear>
             <price>39.99</price>
             <frontCover src="KrewElfow.jpg"/>
-            <isbn>978-0-575-08484-1</isbn>
+            <isbn>978-0-5751-08484-1</isbn>
         </book>
         <book bookID="4" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="paperback" publisherID="superNOWA">
@@ -120,7 +120,7 @@
             <publishYear>1995</publishYear>
             <price>35.99</price>
             <frontCover src="CzasPogardy.jpg"/>
-            <isbn>978-0-575-09094-1</isbn>
+            <isbn>978-0-5575-09094-1</isbn>
         </book>
         <book bookID="5" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="paperback" publisherID="superNOWA">
@@ -129,7 +129,7 @@
             <publishYear>1996</publishYear>
             <price>35.99</price>
             <frontCover src="ChrzestOgnia.jpg"/>
-            <isbn>978-0-575-09097-2</isbn>
+            <isbn>978-0-5475-09097-2</isbn>
         </book>
         <book bookID="6" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="paperback" publisherID="superNOWA">
@@ -138,7 +138,7 @@
             <publishYear>1997</publishYear>
             <price>35.99</price>
             <frontCover src="WiezaJaskolki.jpg"/>
-            <isbn>978-0-575-09083-3</isbn>
+            <isbn>978-0-5765-09083-3</isbn>
         </book>
         <book bookID="7" authorID="ASapkowski" genreID="fantasy"
               coverTypeID="paperback" publisherID="superNOWA">
@@ -147,7 +147,7 @@
             <publishYear>1999</publishYear>
             <price>38.99</price>
             <frontCover src="PaniJeziora.jpg"/>
-            <isbn>978-0-575-09084-4</isbn>
+            <isbn>978-0-5758-09084-4</isbn>
         </book>
         <book bookID="8" authorID="SKing" genreID="horror"
               coverTypeID="paperback" publisherID="Viking">
@@ -156,7 +156,7 @@
             <publishYear>1986</publishYear>
             <price>45.49</price>
             <frontCover src="It.jpg"/>
-            <isbn>0-670-81302-8</isbn>
+            <isbn>670-0-1234-81302-8</isbn>
         </book>
         <book bookID="9" authorID="SKing" genreID="horror"
               coverTypeID="paperback" publisherID="Doubleday">
@@ -165,7 +165,7 @@
             <publishYear>1977</publishYear>
             <price>30.49</price>
             <frontCover src="TheShinning.jpg"/>
-            <isbn>978-0-385-12167-5</isbn>
+            <isbn>978-0-3875-12167-5</isbn>
         </book>
         <book bookID="10" authorID="SKing" genreID="fantasy"
               coverTypeID="hardback" publisherID="Signet">
@@ -174,7 +174,7 @@
             <publishYear>1996</publishYear>
             <price>41.49</price>
             <frontCover src="TheGreenMile.jpg"/>
-            <isbn>2-525-67882-7</isbn>
+            <isbn>345-2-5258-67882-7</isbn>
         </book>
         <book bookID="11" authorID="UEco" genreID="kryminał"
               coverTypeID="hardback" publisherID="Bompiani">
@@ -183,7 +183,7 @@
             <publishYear>1980</publishYear>
             <price>49.99</price>
             <frontCover src="TheNameoftheRose.jpg"/>
-            <isbn>0-15-144647-4</isbn>
+            <isbn>231-0-1455-14647-4</isbn>
         </book>
         <book bookID="12" authorID="BPrus" genreID="powieść"
               coverTypeID="paperback" publisherID="Gebethner-Wolff">
@@ -192,7 +192,7 @@
             <publishYear>1890</publishYear>
             <price>23.23</price>
             <frontCover src="Lalka.jpg"/>
-            <isbn>83-01-05734-3</isbn>
+            <isbn>123-3-0551-05734-3</isbn>
         </book>
         <book bookID="13" authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
@@ -201,7 +201,7 @@
             <publishYear>1996</publishYear>
             <price>41.49</price>
             <frontCover src="AGameOfThrones.jpg"/>
-            <isbn>0-553-10354-7</isbn>
+            <isbn>657-0-5583-10354-7</isbn>
         </book>
         <book bookID="14" authorID="GRRMartin" genreID="fantasy"
               coverTypeID="paperback" publisherID="Zysk">
@@ -210,7 +210,7 @@
             <publishYear>1999</publishYear>
             <price>35.49</price>
             <frontCover src="AClashOfKings.jpg"/>
-            <isbn>0-553-10803-4</isbn>
+            <isbn>845-0-5537-10803-4</isbn>
         </book>
         <book bookID="15" authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
@@ -219,7 +219,7 @@
             <publishYear>2000</publishYear>
             <price>39.99</price>
             <frontCover src="AStormOfSwords.jpg"/>
-            <isbn>0-553-10663-5</isbn>
+            <isbn>467-0-5538-10663-5</isbn>
         </book>
         <book bookID="16" authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
@@ -228,7 +228,7 @@
             <publishYear>2005</publishYear>
             <price>42.57</price>
             <frontCover src="AFeastForCrows.jpg"/>
-            <isbn>0-553-80150-3</isbn>
+            <isbn>757-0-5593-80150-3</isbn>
         </book>
         <book bookID="17" authorID="GRRMartin" genreID="fantasy"
               coverTypeID="hardback" publisherID="Zysk">
@@ -237,7 +237,7 @@
             <publishYear>2011</publishYear>
             <price>55.67</price>
             <frontCover src="ADanceWithDragons.jpg"/>
-            <isbn>0-526-47181-7</isbn>
+            <isbn>636-0-5286-47181-7</isbn>
         </book>
         <book bookID="18" authorID="JGreen" genreID="powieść"
               coverTypeID="paperback" publisherID="Dutton">
@@ -246,7 +246,7 @@
             <publishYear>2012</publishYear>
             <price>30.27</price>
             <frontCover src="TheFaultInOurStars.jpg"/>
-            <isbn>0-525-47881-7</isbn>
+            <isbn>858-0-5295-47881-7</isbn>
         </book>
         <book bookID="19" authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
@@ -255,7 +255,7 @@
             <publishYear>1884</publishYear>
             <price>20.27</price>
             <frontCover src="OgniemIMieczem.jpg"/>
-            <isbn>918-3-555-09083-1</isbn>
+            <isbn>918-3-5575-09083-1</isbn>
         </book>
         <book bookID="20" authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
@@ -264,7 +264,7 @@
             <publishYear>1886</publishYear>
             <price>29.87</price>
             <frontCover src="Potop.jpg"/>
-            <isbn>918-3-555-09083-2</isbn>
+            <isbn>918-3-5555-09083-2</isbn>
         </book>
         <book bookID="21" authorID="HSienkiewicz" genreID="powieść"
               coverTypeID="paperback" publisherID="Greg">
@@ -273,7 +273,7 @@
             <publishYear>1887</publishYear>
             <price>10.36</price>
             <frontCover src="PanWolodyjowski.jpg"/>
-            <isbn>918-3-555-09083-3</isbn>
+            <isbn>918-3-5585-09083-3</isbn>
         </book>
     </books>
 </bookStore>

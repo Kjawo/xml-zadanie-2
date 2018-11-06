@@ -3,10 +3,6 @@
 <!-- File: xml-zadanie-2.xsd -->
 <!-- Authors: Konrad Jaworski, Tomasz Witczak -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- TODO: dodać pattern dla numeru ISBN -->
-<!-- TODO: sprawdzić czy wszystko zgadza się z wymaganiami zadania -->
-<!-- TODO: sprawdzić kod w walidatorze w internecie -->
-<!-- TODO: po zrobieniu powyższych, usunąć te todo z kodu i zrobić upload na wikampa -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:tns="technologieXML-zad2-bookStore"
             targetNamespace="technologieXML-zad2-bookStore"
@@ -233,13 +229,14 @@
             </xsd:complexType>
 
                 <!-- > frontCover -->
-                <xsd:complexType name="type_frontCover">
+               <xsd:complexType name="type_frontCover">
                     <xsd:simpleContent>
                         <xsd:extension base="xsd:string">
                             <xsd:attribute name="src" type="xsd:string" use="required" />
                         </xsd:extension>
                     </xsd:simpleContent>
                 </xsd:complexType>
+
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Additional simple types -->
@@ -280,9 +277,9 @@
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="type_isbn">
+    <xsd:simpleType name="type_isbn">               <!-- ISBN formatted like 123-4-5678-12345-0 -->
         <xsd:restriction base="xsd:string">
-            <!-- TODO --> <xsd:pattern value="(\c{17})|(\c{13})" />
+            <xsd:pattern value="\p{N}{3}[-]\p{N}[-]\p{N}{4}[-]\p{N}{5}[-]\p{N}" />
         </xsd:restriction>
     </xsd:simpleType>
 
