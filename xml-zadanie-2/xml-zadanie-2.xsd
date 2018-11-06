@@ -3,6 +3,10 @@
 <!-- File: xml-zadanie-2.xsd -->
 <!-- Authors: Konrad Jaworski, Tomasz Witczak -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- TODO: dodać pattern dla numeru ISBN -->
+<!-- TODO: sprawdzić czy wszystko zgadza się z wymaganiami zadania -->
+<!-- TODO: sprawdzić kod w walidatorze w internecie -->
+<!-- TODO: po zrobieniu powyższych, usunąć te todo z kodu i zrobić upload na wikampa -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:tns="technologieXML-zad2-bookStore"
             targetNamespace="technologieXML-zad2-bookStore"
